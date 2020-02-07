@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Hex_To_Segg is
 port(
     input: IN std_logic_vector(3 downto 0);
-    output: OUT std_logic_vector (6 downto 0)
+    output: OUT std_logic_vector (0 to 6)
     );
 end Hex_To_Segg;
 
