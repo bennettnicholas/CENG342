@@ -1,0 +1,7 @@
+Running: xsim.dir/Eight_One_Mux_Bench_behav/xsimk.exe -simmode gui -wdb Eight_One_Mux_Bench_behav.wdb -simrunnum 0 -socket 64352
+Design successfully loaded
+Design Loading Memory Usage: 5204 KB (Peak: 5204 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 5780 KB (Peak: 5780 KB)
+Simulation CPU Usage: 31 ms
