@@ -1,0 +1,4 @@
+Running: xsim.dir/OneBitFullAdderBench_behav/xsimk.exe -simmode gui -wdb OneBitFullAdderBench_behav.wdb -simrunnum 0 -socket 51116
+Design successfully loaded
+Design Loading Memory Usage: 5212 KB (Peak: 5212 KB)
+Design Loading CPU Usage: 30 ms

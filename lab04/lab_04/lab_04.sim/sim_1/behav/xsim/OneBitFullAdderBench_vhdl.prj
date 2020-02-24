@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl work  \
+"../../../../lab_04.srcs/sources_1/new/OneBitFullAdder.vhd" \
+"../../../../lab_04.srcs/sim_1/new/OneBitFullAdderBench.vhd" \
+
+# Do not sort compile order
+nosort
