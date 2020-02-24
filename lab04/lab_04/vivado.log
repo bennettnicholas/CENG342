@@ -1,0 +1,656 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Feb 23 15:43:16 2020
+# Process ID: 18540
+# Current directory: C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5712 C:\Users\7380314\Documents\GitHub\CENG342\lab04\lab_04\lab_04.xpr
+# Log file: C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/vivado.log
+# Journal file: C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/7376247/Desktop/CENG342/lab04/lab_04' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:12 . Memory (MB): peak = 1127.652 ; gain = 236.730
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd w ]
+add_files -fileset sim_1 C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd w ]
+add_files -fileset sim_1 C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd
+update_compile_order -fileset sim_1
+set_property top N_bit_adder_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\7380314\Documents\GitHub\CENG342\lab04\lab_04\lab_04.srcs\sim_1\new\GenericBench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\7380314\Documents\GitHub\CENG342\lab04\lab_04\lab_04.srcs\sim_1\new\N_bit_adder_test.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\7380314\Documents\GitHub\CENG342\lab04\lab_04\lab_04.srcs\sources_1\new\OneBitFullAdder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\7380314\Documents\GitHub\CENG342\lab04\lab_04\lab_04.srcs\sim_1\new\N_bit_adder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\7380314\Documents\GitHub\CENG342\lab04\lab_04\lab_04.srcs\sim_1\new\GenericBench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\7380314\Documents\GitHub\CENG342\lab04\lab_04\lab_04.srcs\sim_1\new\N_bit_adder_test.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\7380314\Documents\GitHub\CENG342\lab04\lab_04\lab_04.srcs\sources_1\new\OneBitFullAdder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\7380314\Documents\GitHub\CENG342\lab04\lab_04\lab_04.srcs\sim_1\new\N_bit_adder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj N_bit_adder_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sources_1/new/OneBitFullAdder.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'OneBitFullAdder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 2 elements ; expected 3 [C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd:41]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit n_bit_adder_test in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1127.652 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj N_bit_adder_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 2 elements ; expected 3 [C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd:41]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit n_bit_adder_test in library work failed.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1127.652 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1127.652 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj N_bit_adder_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture sop_arch of entity work.OneBitFullAdder [onebitfulladder_default]
+Compiling architecture ripple_adder of entity xil_defaultlib.N_bit_adder [n_bit_adder_default]
+Compiling architecture test_bench of entity xil_defaultlib.n_bit_adder_test
+Built simulation snapshot N_bit_adder_test_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim/xsim.dir/N_bit_adder_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim/xsim.dir/N_bit_adder_test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Feb 23 16:31:18 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 110.141 ; gain = 22.336
+INFO: [Common 17-206] Exiting Webtalk at Sun Feb 23 16:31:18 2020...
+run_program: Time (s): cpu = 00:00:08 ; elapsed = 00:01:18 . Memory (MB): peak = 1127.652 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '78' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "N_bit_adder_test_behav -key {Behavioral:sim_1:Functional:N_bit_adder_test} -tclbatch {N_bit_adder_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source N_bit_adder_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 4000ns
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1127.652 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'N_bit_adder_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 4000ns
+launch_simulation: Time (s): cpu = 00:00:19 ; elapsed = 00:01:28 . Memory (MB): peak = 1127.652 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:32 . Memory (MB): peak = 1127.652 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj N_bit_adder_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1127.652 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture sop_arch of entity work.OneBitFullAdder [onebitfulladder_default]
+Compiling architecture ripple_adder of entity xil_defaultlib.N_bit_adder [n_bit_adder_default]
+Compiling architecture test_bench of entity xil_defaultlib.n_bit_adder_test
+Built simulation snapshot N_bit_adder_test_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1127.652 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "N_bit_adder_test_behav -key {Behavioral:sim_1:Functional:N_bit_adder_test} -tclbatch {N_bit_adder_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source N_bit_adder_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 4000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'N_bit_adder_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 4000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1127.652 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 1127.652 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj N_bit_adder_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture sop_arch of entity work.OneBitFullAdder [onebitfulladder_default]
+Compiling architecture ripple_adder of entity xil_defaultlib.N_bit_adder [\N_bit_adder(n=4)\]
+Compiling architecture test_bench of entity xil_defaultlib.n_bit_adder_test
+Built simulation snapshot N_bit_adder_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "N_bit_adder_test_behav -key {Behavioral:sim_1:Functional:N_bit_adder_test} -tclbatch {N_bit_adder_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source N_bit_adder_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 4000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'N_bit_adder_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 4000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1127.652 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 1127.652 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj N_bit_adder_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture sop_arch of entity work.OneBitFullAdder [onebitfulladder_default]
+Compiling architecture ripple_adder of entity xil_defaultlib.N_bit_adder [\N_bit_adder(n=4)\]
+Compiling architecture test_bench of entity xil_defaultlib.n_bit_adder_test
+Built simulation snapshot N_bit_adder_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "N_bit_adder_test_behav -key {Behavioral:sim_1:Functional:N_bit_adder_test} -tclbatch {N_bit_adder_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source N_bit_adder_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 4000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'N_bit_adder_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 4000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1127.652 ; gain = 0.000
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 1127.652 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-4940] 'onebitfulladder' remains a black box since it has no binding entity [C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd:22]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture ripple_adder of entity xil_defaultlib.N_bit_adder [\N_bit_adder(n=4)\]
+Compiling architecture test_bench of entity xil_defaultlib.n_bit_adder_test
+Built simulation snapshot N_bit_adder_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "N_bit_adder_test_behav -key {Behavioral:sim_1:Functional:N_bit_adder_test} -tclbatch {N_bit_adder_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source N_bit_adder_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 4000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'N_bit_adder_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 4000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1127.652 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:24 . Memory (MB): peak = 1127.652 ; gain = 0.000
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj N_bit_adder_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture test_bench of entity xil_defaultlib.n_bit_adder_test
+Built simulation snapshot N_bit_adder_test_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 1127.652 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '23' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "N_bit_adder_test_behav -key {Behavioral:sim_1:Functional:N_bit_adder_test} -tclbatch {N_bit_adder_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source N_bit_adder_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 4000ns
+ERROR: Array sizes do not match, left array has 4 elements, right array has 2 elements
+Time: 0 ps  Iteration: 0  Process: /N_bit_adder_test/stim_procc
+  File: C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd
+
+HDL Line: C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd:47
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'N_bit_adder_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 4000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:28 . Memory (MB): peak = 1127.652 ; gain = 0.000
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 1127.652 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj N_bit_adder_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture sop_arch of entity work.OneBitFullAdder [onebitfulladder_default]
+Compiling architecture ripple_adder of entity xil_defaultlib.N_bit_adder [\N_bit_adder(n=4)\]
+Compiling architecture test_bench of entity xil_defaultlib.n_bit_adder_test
+Built simulation snapshot N_bit_adder_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "N_bit_adder_test_behav -key {Behavioral:sim_1:Functional:N_bit_adder_test} -tclbatch {N_bit_adder_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source N_bit_adder_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 4000ns
+ERROR: Array sizes do not match, left array has 4 elements, right array has 2 elements
+Time: 0 ps  Iteration: 0  Process: /N_bit_adder_test/stim_procc
+  File: C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd
+
+HDL Line: C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd:49
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'N_bit_adder_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 4000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1127.652 ; gain = 0.000
+set_property library work [get_files  C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 1127.652 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj N_bit_adder_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture sop_arch of entity work.OneBitFullAdder [onebitfulladder_default]
+Compiling architecture ripple_adder of entity xil_defaultlib.N_bit_adder [\N_bit_adder(n=4)\]
+Compiling architecture test_bench of entity xil_defaultlib.n_bit_adder_test
+Built simulation snapshot N_bit_adder_test_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 1127.652 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '24' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "N_bit_adder_test_behav -key {Behavioral:sim_1:Functional:N_bit_adder_test} -tclbatch {N_bit_adder_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source N_bit_adder_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 4000ns
+ERROR: Array sizes do not match, left array has 4 elements, right array has 2 elements
+Time: 0 ps  Iteration: 0  Process: /N_bit_adder_test/stim_procc
+  File: C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd
+
+HDL Line: C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd:51
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'N_bit_adder_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 4000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:29 . Memory (MB): peak = 1127.652 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 1127.652 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'N_bit_adder_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj N_bit_adder_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+"xelab -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 90ffe857ac58417dbc9bd846432cae55 --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L secureip --snapshot N_bit_adder_test_behav xil_defaultlib.N_bit_adder_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture sop_arch of entity work.OneBitFullAdder [onebitfulladder_default]
+Compiling architecture ripple_adder of entity xil_defaultlib.N_bit_adder [\N_bit_adder(n=4)\]
+Compiling architecture test_bench of entity xil_defaultlib.n_bit_adder_test
+Built simulation snapshot N_bit_adder_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "N_bit_adder_test_behav -key {Behavioral:sim_1:Functional:N_bit_adder_test} -tclbatch {N_bit_adder_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source N_bit_adder_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 4000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'N_bit_adder_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 4000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1127.652 ; gain = 0.000
+file mkdir C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1
+file mkdir C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new
+close [ open C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/board.xdc w ]
+add_files -fileset constrs_1 C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/board.xdc

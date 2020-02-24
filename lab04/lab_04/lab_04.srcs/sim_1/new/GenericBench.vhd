@@ -21,7 +21,7 @@ begin
     n_bit_adder : for n_bit in 0 to n - 1 generate
         signal oldinputcarry : STD_LOGIC := '1';
         signal newinputcarry : STD_LOGIC;
-        begin
+        begin 
         single_bit_adder : component OneBitFullAdder
             port map(a => Ia(n_bit),
                      b => Ib(n_bit),
