@@ -1,2 +1,6 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder_test.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder_test'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'N_bit_adder'
+ERROR: [VRFC 10-2989] 'onebitfulladder' is not declared [C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd:35]
+ERROR: [VRFC 10-3518] mismatch on label ; expected 'add_sub' [C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd:37]
+ERROR: [VRFC 10-3782] unit 'add_sub' ignored due to previous errors [C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd:26]
+INFO: [VRFC 10-3070] VHDL file 'C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd' ignored due to errors

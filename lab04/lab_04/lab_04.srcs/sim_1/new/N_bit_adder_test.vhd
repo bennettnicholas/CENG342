@@ -1,24 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 02/23/2020 04:10:17 PM
--- Design Name: 
--- Module Name: N_bit_adder_test - test_bench
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL; 
@@ -40,7 +19,7 @@ architecture test_bench of N_bit_adder_test is
      signal cin, COUT: STD_LOGIC;
      
 begin
-UUT: entity work.N_bit_adder(ripple_adder)
+UUT: entity work.N_bit_adder()
     generic map(n => n)
     PORT MAP(cin => cin, A => A, B => B, sum => sum, cout => cout); 
 stim_procc: process
