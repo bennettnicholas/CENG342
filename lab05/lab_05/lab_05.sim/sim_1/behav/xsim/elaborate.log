@@ -1,0 +1,16 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto e2f946f856f74a3b847d16bbb2283bba --incr --debug typical --relax --mt 2 -L work -L secureip --snapshot eight_test_behav work.eight_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture struct_arch of entity work.shifter_8bit [shifter_8bit_default]
+Compiling architecture test_arch of entity work.eight_test
+Built simulation snapshot eight_test_behav
