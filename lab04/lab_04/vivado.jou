@@ -64,3 +64,94 @@ file mkdir C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/co
 file mkdir C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new
 close [ open C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/board.xdc w ]
 add_files -fileset constrs_1 C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/board.xdc
+set_property -name {xsim.simulate.runtime} -value {320000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source N_bit_adder_test.tcl
+set_property -name {xsim.simulate.runtime} -value {179200ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source N_bit_adder_test.tcl
+set_property -name {xsim.simulate.runtime} -value {27200ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source N_bit_adder_test.tcl
+set_property -name {xsim.simulate.runtime} -value {25600ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source N_bit_adder_test.tcl
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -url localhost:3121 -allow_non_jtag
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210292AA7C13A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210292AA7C13A]
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.runs/impl_1/OneBitFullAdder.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.runs/impl_1/OneBitFullAdder.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+set_property used_in_synthesis false [get_files  C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sources_1/new/OneBitFullAdder.vhd]
+update_compile_order -fileset sources_1
+close [ open C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/four_bit_adder.xdc w ]
+add_files -fileset constrs_1 C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/four_bit_adder.xdc
+move_files [get_files  C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property target_constrs_file C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/four_bit_adder.xdc [current_fileset -constrset]
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reorder_files -fileset constrs_1 -before C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/board.xdc C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/four_bit_adder.xdc
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+move_files -fileset sim_1 [get_files  C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sources_1/new/OneBitFullAdder.vhd]
+update_compile_order -fileset sim_1
+move_files -fileset sim_1 [get_files  C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd]
+update_compile_order -fileset sim_1
+move_files [get_files  C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+set_property is_enabled false [get_files  C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/board.xdc]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+move_files -fileset sim_1 [get_files  C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd]
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+set_property is_enabled false [get_files  C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/constrs_1/new/four_bit_adder.xdc]
+launch_simulation
+set_property used_in_synthesis false [get_files  C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/N_bit_adder.vhd]
+launch_simulation
+launch_simulation
+launch_simulation
+source N_bit_adder_test.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/full_add_sub.vhd w ]
+add_files -fileset sim_1 C:/Users/7380314/Documents/GitHub/CENG342/lab04/lab_04/lab_04.srcs/sim_1/new/full_add_sub.vhd
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation

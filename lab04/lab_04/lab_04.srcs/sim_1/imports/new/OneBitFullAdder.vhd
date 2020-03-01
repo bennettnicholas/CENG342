@@ -13,7 +13,5 @@ architecture sop_arch of OneBitFullAdder is
     begin
     co <= ((a and b) or (b and ci) or (a and ci));
     o <= ((not (a) and not(b) and ci) or (not(a) and b and not(ci))
-            or (a and b and ci) or (a and not(b) and not(ci)));
+           or (a and b and ci) or (a and not(b) and not(ci)));
 end sop_arch;
-    
-    
