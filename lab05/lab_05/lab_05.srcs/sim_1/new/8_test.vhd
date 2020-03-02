@@ -18,36 +18,36 @@ begin
                  shamt => Tshamt, co => Tco);
         -- test vecotr
 looped: process 
-    variable numa: integer := 8;
+    variable numa: integer := -5;
     variable i: integer;
 begin
         --PASS THROUGH
         Tfunc <= "00";
-        Tdin <= std_logic_vector(to_unsigned(numa, 8));
+        Tdin <= std_logic_vector(to_signed(numa, 8));
         for i in 0 to 7 loop
             Tshamt <= std_logic_vector(to_unsigned(i, 3));
-            wait for 200ns;
+            wait for 100ns;
         end loop;
         --LSL
         Tfunc <= "01";
-        Tdin <= std_logic_vector(to_unsigned(numa, 8));
+        Tdin <= std_logic_vector(to_signed(numa, 8));
         for i in 0 to 7 loop
             Tshamt <= std_logic_vector(to_unsigned(i, 3));
-            wait for 200ns;
+            wait for 100ns;
         end loop;
         --LSR
         Tfunc <= "10";
-        Tdin <= std_logic_vector(to_unsigned(numa, 8));
+        Tdin <= std_logic_vector(to_signed(numa, 8));
         for i in 0 to 7 loop
             Tshamt <= std_logic_vector(to_unsigned(i, 3));
-            wait for 200ns;
+            wait for 100ns;
         end loop;
         --ASR
         Tfunc <= "11";
-        Tdin <= std_logic_vector(to_unsigned(numa, 8));
+        Tdin <= std_logic_vector(to_signed(numa, 8));
         for i in 0 to 7 loop
             Tshamt <= std_logic_vector(to_unsigned(i, 3));
-            wait for 200ns;
+            wait for 100ns;
         end loop;
 end process; 
 END;

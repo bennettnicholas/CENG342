@@ -11,20 +11,23 @@ entity shifter_8bit is
 end shifter_8bit;
 
 architecture struct_arch of shifter_8bit is
-    signal ns, lsl, lsr, asr : STD_LOGIC_VECTOR(7 downto 0);
-    signal temp : STD_LOGIC_VECTOR(23 downto 0);
+    signal ns, lsl, lsr, asrtemp, asr : STD_LOGIC_VECTOR(7 downto 0);
+    signal temp : STD_LOGIC_VECTOR(23 downto 0) := "000000000000000000000000";
+    signal Atemp : STD_LOGIC_VECTOR(23 downto 0) := "111111111111111111111111";
     signal sign : STD_LOGIC;
     begin
     --no shift (do nothing)
     temp(15 downto 8) <= din(7 downto 0);
+    Atemp(15 downto 8) <= din(7 downto 0);
     ns <= din;
     --logical shift left
-    lsl(7 downto 0) <= temp((15+to_integer(unsigned(shamt))) downto (8+to_integer(unsigned(shamt))));
+    lsr <= temp((15+to_integer(unsigned(shamt))) downto (8+to_integer(unsigned(shamt))));
     --logical shift right
-    lsr(7 downto 0) <= temp((15-to_integer(unsigned(shamt))) downto (8-to_integer(unsigned(shamt))));
-    temp(8-to_integer(unsigned(shamt))) <= '1' when temp(8) = '1';
+    lsl <= temp((15-to_integer(unsigned(shamt))) downto (8-to_integer(unsigned(shamt))));
     --arithmitic shift right
-    asr(7 downto 0) <= temp((15-to_integer(unsigned(shamt))) downto (8-to_integer(unsigned(shamt))));
+    asrtemp <= Atemp((15+to_integer(unsigned(shamt))) downto (8+(to_integer(unsigned(shamt)))));
+    asr <= asrtemp OR "10000000" when din(7) = '1' else
+           asrtemp AND "01111111";
     
     dout <= ns  when func = "00" else
             lsl when func = "01" else
