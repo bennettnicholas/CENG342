@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/lab_6/lab_6.srcs/sim_1/new/Generic_ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Generic_ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/7380314/lab_6/lab_6.srcs/sim_1/new/ALU_Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_Testbench'

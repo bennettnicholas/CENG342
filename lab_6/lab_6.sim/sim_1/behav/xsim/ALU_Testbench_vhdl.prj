@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../lab_6.srcs/sim_1/new/Generic_ALU.vhd" \
+"../../../../lab_6.srcs/sim_1/new/ALU_Testbench.vhd" \
+
+# Do not sort compile order
+nosort
