@@ -50,7 +50,7 @@ begin
     '0'; -- otherwise nothing;
     
     -- negative
-    N <= std_logic(Rout(N_Bit - 1));
+    N <= std_logic(Rout(N_Bit - 1 - 1));
     
     -- zero
     Z <= '1' when Rout(N_Bit - 1 downto 0) = "0" else '0';
@@ -72,19 +72,19 @@ begin
 process(A,B,F)
     begin
     case F is
-    when "0000" => Rout <= a + b; -- add 
-    when "0010" => Rout <= a + b + ci; -- add with carry 
-    when "0100" => Rout <= a + NOT(b) + 1; -- subtract
-    when "0110" => Rout <= a + NOT(b) + 1 + Ci; -- subtract with carry
-    when "1001" => Rout <= NOT(b); -- Not B
-    when "1011" => Rout <= a AND b; -- A and B 
-    when "1101" => Rout <= a OR b; -- A Or B 
-    when "1111" => Rout <= a XOR b; -- A Xor B
-    when "1000" => Rout(N_Bit - 1 downto 0) <= b; --Pass thru 
-    when "1010" => Rout <= shift_left(a, to_integer(b)); -- LSL  
-    when "1100" => Rout <= shift_right(a, to_integer(b)); -- LSR 
-    when "1110" => Rout <= rotate_right(a, to_integer(b));-- ASR
-    when others => -- otherwise nothing;
+    when "0000" => Rout <= ('0' & a) + ('0'& b); -- add 
+    when "0010" => Rout <= ('0' & a) + ('0'& b) + ci; -- add with carry 
+    when "0100" => Rout <= ('0' & a) + (NOT(b(N_Bit-1)&b)) + 1; -- subtract
+    when "0110" => Rout <= ('0' & a) + (NOT(b(N_Bit-1)&b)) + 1 + Ci; -- subtract with carry
+    when "1001" => Rout <= '0' & NOT(b); -- Not B
+    when "1011" => Rout <= '0' & (a AND b); -- A and B 
+    when "1101" => Rout <= '0' & (a OR b); -- A Or B 
+    when "1111" => Rout <= '0' & (a XOR b); -- A Xor B
+    when "1000" => Rout <= '0' & b; --Pass thru 
+    when "1010" => Rout <= '0' & shift_left(a, to_integer(b)); -- LSL  
+    when "1100" => Rout <= '0' & shift_right(a, to_integer(b)); -- LSR 
+    when "1110" => Rout <= '0' & rotate_right(a, to_integer(b));-- ASR
+    when others => Rout <= (others => '0'); -- otherwise nothing;
     end case;
 end process;
     -- Output of the fucntion inputed

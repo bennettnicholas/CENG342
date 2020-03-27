@@ -22,9 +22,10 @@ begin
     ci <= "0";
     F <= "0000";
     A <= to_signed(num_a, 4);
-    --for i in 0 to 7 loop
-        B <= to_signed(num_b, 4);
+    for i in 0 to 7 loop
+        B <= to_signed(i, 4);
         wait for 100 ns;
-   -- end loop;
+   end loop;
+   wait;
 end process;
 end cheat_test;
