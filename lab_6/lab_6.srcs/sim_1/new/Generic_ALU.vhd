@@ -21,7 +21,7 @@ end Generic_ALU;
 
 architecture cheating of Generic_ALU is
     -- must add 0's to this if you change the value
-    signal Rout: UnSigned(N_Bit downto 0) := "000000000"; -- Upper bits are used to house the carry over
+    signal Rout: UnSigned(N_Bit downto 0) := "00000"; -- Upper bits are used to house the carry over
     signal overflow: STD_LOGIC;
     signal Ax: UnSigned(N_Bit downto 0);
     signal Bx: UnSigned(N_Bit downto 0);
@@ -68,7 +68,7 @@ begin
     '0'; -- otherwise nothing;
     
  -- selecting which function 
-process(Ax,Bx,F)
+process(Ax,Bx,F,Ci)
     begin
     case F is
     when "0000" => Rout <= Ax + Bx; -- add 
