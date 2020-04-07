@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/lab_8/lab_8.srcs/sim_1/new/ccr.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'ccr'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/lab_8/lab_8.srcs/sim_1/new/ccr_test_bench.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'ccr_test_bench'

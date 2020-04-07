@@ -1,0 +1,16 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 2b333a0b00e04804892e4ce8cab76316 --incr --debug typical --relax --mt 2 -L work -L secureip --snapshot ccr_test_bench_behav work.ccr_test_bench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture lab of entity work.ccr [ccr_default]
+Compiling architecture behavioral of entity work.ccr_test_bench
+Built simulation snapshot ccr_test_bench_behav

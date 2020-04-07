@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Apr  7 01:11:59 2020
+# Process ID: 18788
+# Current directory: D:/Dev/CENG342/project_8
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8388 D:\Dev\CENG342\project_8\project_8.xpr
+# Log file: D:/Dev/CENG342/project_8/vivado.log
+# Journal file: D:/Dev/CENG342/project_8\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Dev/CENG342/project_8/project_8.xpr
+launch_simulation
+source generic_register_bench.tcl
+close_sim

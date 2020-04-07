@@ -1,0 +1,80 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Apr  7 01:11:59 2020
+# Process ID: 18788
+# Current directory: D:/Dev/CENG342/project_8
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8388 D:\Dev\CENG342\project_8\project_8.xpr
+# Log file: D:/Dev/CENG342/project_8/vivado.log
+# Journal file: D:/Dev/CENG342/project_8\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Dev/CENG342/project_8/project_8.xpr
+INFO: [Project 1-313] Project file moved from 'E:/CENG342/project_8' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 943.957 ; gain = 276.508
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/project_8/project_8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'generic_register_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/project_8/project_8.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj generic_register_bench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/project_8/project_8.srcs/sim_1/new/generic_register.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'generic_register'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/project_8/project_8.srcs/sim_1/new/generic_register_bench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'generic_register_bench'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Dev/CENG342/project_8/project_8.sim/sim_1/behav/xsim'
+"xelab -wto e1b1e2f2e56541a18f1eb6d15baed6e0 --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L secureip --snapshot generic_register_bench_behav xil_defaultlib.generic_register_bench -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto e1b1e2f2e56541a18f1eb6d15baed6e0 --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L secureip --snapshot generic_register_bench_behav xil_defaultlib.generic_register_bench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.generic_register [generic_register_default]
+Compiling architecture behavioral of entity xil_defaultlib.generic_register_bench
+Built simulation snapshot generic_register_bench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Dev/CENG342/project_8/project_8.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "generic_register_bench_behav -key {Behavioral:sim_1:Functional:generic_register_bench} -tclbatch {generic_register_bench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source generic_register_bench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'generic_register_bench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 973.887 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  7 02:29:39 2020...

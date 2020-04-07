@@ -55,7 +55,7 @@ begin
             port map(Enable => write, sel => Dsel, output => Enables);
 
      -- why an error???       
-     A <= output(to_integer(unsigned(Asel));
-     B <= output(to_integer(unsigned(Bsel));
+     A <= output(to_integer(unsigned(Asel)));
+     B <= output(to_integer(unsigned(Bsel)));
      
 end Behavioral;

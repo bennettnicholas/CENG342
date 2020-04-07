@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl work  \
+"../../../../lab_8.srcs/sim_1/new/ccr.vhd" \
+"../../../../lab_8.srcs/sim_1/new/ccr_test_bench.vhd" \
+
+# Do not sort compile order
+nosort
