@@ -1,4 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/project_8/project_8.srcs/sim_1/new/generic_register.vhd" into library work
-INFO: [VRFC 10-3107] analyzing entity 'generic_register'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/project_8/project_8.srcs/sim_1/new/generic_register_bench.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'generic_register_bench'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/CENG342/project_8/project_8.srcs/sim_1/new/CCR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CCR'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/CENG342/project_8/project_8.srcs/sim_1/new/CCR_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CCR_test'

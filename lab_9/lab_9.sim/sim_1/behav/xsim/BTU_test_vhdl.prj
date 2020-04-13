@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl work  \
+"../../../../lab_9.srcs/sim_1/new/BTU.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../lab_9.srcs/sim_1/new/BTU_test.vhd" \
+
+# Do not sort compile order
+nosort

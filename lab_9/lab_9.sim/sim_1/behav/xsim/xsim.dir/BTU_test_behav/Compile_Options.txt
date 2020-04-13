@@ -1,0 +1,1 @@
+-wto "d2bed9958c2b4206b62bc1d8d6c4b53d" --incr --debug "typical" --relax --mt "2" -L "work" -L "xil_defaultlib" -L "secureip" --snapshot "BTU_test_behav" "xil_defaultlib.BTU_test" -log "elaborate.log" 

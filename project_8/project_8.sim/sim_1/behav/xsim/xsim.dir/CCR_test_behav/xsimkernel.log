@@ -1,0 +1,4 @@
+Running: xsim.dir/CCR_test_behav/xsimk.exe -simmode gui -wdb CCR_test_behav.wdb -simrunnum 0 -socket 54532
+Design successfully loaded
+Design Loading Memory Usage: 5700 KB (Peak: 5700 KB)
+Design Loading CPU Usage: 62 ms

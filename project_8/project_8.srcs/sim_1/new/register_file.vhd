@@ -14,7 +14,7 @@ generic(
             Bsel: in std_logic_vector(Nsel-1 downto 0);
             Dsel: in std_logic_vector(Nsel-1 downto 0);
             DIsel: in std_logic;
-            Dlen: in std_logic;
+            --Dlen: in std_logic;
             Din: in std_logic_vector (Bits-1 downto 0);
             -- Dout: out std_logic_vector (Bits-1 downto 0); whoops on the otherside 
             A: out std_logic_vector (Bits-1 downto 0);

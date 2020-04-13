@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Apr  9 20:31:02 2020
+# Process ID: 11992
+# Current directory: E:/CENG342/lab_9/lab_9.runs/synth_1
+# Command line: vivado.exe -log BTU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BTU.tcl
+# Log file: E:/CENG342/lab_9/lab_9.runs/synth_1/BTU.vds
+# Journal file: E:/CENG342/lab_9/lab_9.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source BTU.tcl -notrace
