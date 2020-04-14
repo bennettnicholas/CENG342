@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl work  \
+"../../../../project_8.srcs/sim_1/new/decoder.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../project_8.srcs/sim_1/new/decoder_test.vhd" \
+
+# Do not sort compile order
+nosort

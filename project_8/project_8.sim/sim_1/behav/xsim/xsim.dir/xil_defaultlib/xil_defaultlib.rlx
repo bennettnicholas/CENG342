@@ -4,5 +4,6 @@ Nov  6 2019
 21:57:16
 E:/CENG342/project_8/project_8.srcs/sim_1/new/CCR.vhd,1586813658,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/CCR_test.vhd,,,ccr,,,,,,,,
 E:/CENG342/project_8/project_8.srcs/sim_1/new/CCR_test.vhd,1586814358,vhdl,,,,ccr_test,,,,,,,,
-,,,E:/CENG342/project_8/project_8.srcs/sim_1/new/CCR.vhd,,,generic_register,,,,,,,,
-E:/CENG342/project_8/project_8.srcs/sim_1/new/register_file_test.vhd,1586811771,vhdl,,,,register_file_test,,,,,,,,
+E:/CENG342/project_8/project_8.srcs/sim_1/new/PC_test.vhd,1586832127,vhdl,,,,pc_test,,,,,,,,
+E:/CENG342/project_8/project_8.srcs/sim_1/new/decoder_test.vhd,1586816034,vhdl,,,,decoder_test,,,,,,,,
+E:/CENG342/project_8/project_8.srcs/sim_1/new/register_file_test.vhd,1586826356,vhdl,,,,register_file_test,,,,,,,,

@@ -1,43 +1,26 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04/13/2020 03:52:14 PM
--- Design Name: 
--- Module Name: MAR - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity MAR is
---  Port ( );
+    generic (Bits: integer := 32);
+    Port (
+           input: in std_logic_vector(Bits - 1 downto 0);
+           output: out std_logic_vector(Bits -1 downto 0);
+           Enable, clk, reset: in std_logic  
+          );
 end MAR;
 
-architecture Behavioral of MAR is
+architecture arch of MAR is
 
 begin
+       MAR_register: entity work.generic_register(Behavioral)
+    generic map( Bits => Bits)
+    port map(  
+            Enable => Enable, 
+            clk => clk, 
+            reset => reset, 
+            din => input, 
+            dout => output
+            );
 
-
-end Behavioral;
+end arch;

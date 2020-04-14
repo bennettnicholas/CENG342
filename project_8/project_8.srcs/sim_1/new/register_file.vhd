@@ -51,7 +51,7 @@ begin
      -- Decode the registers we want using pyeatt's generic decoder :) thanks dad
      Decode:  
         entity work.decoder(Behavioral)
-            generic map(Bits => Bits)
+            generic map(Bits => Nsel)
             port map(Enable => write, sel => Dsel, output => Enables);
 
      -- why an error???       

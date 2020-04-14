@@ -19,6 +19,7 @@ signal A: std_logic_vector (Bits-1 downto 0);
 signal B: std_logic_vector (Bits-1 downto 0);
 signal clk, reset: std_logic := '1';
 signal test_in: integer := 0;
+
 begin 
     uut: entity work.register_file(Behavioral)
         generic map( Bits => Bits, Nsel => Nsel)
@@ -30,14 +31,14 @@ begin
 process 
     variable i: integer := 0;
      begin
-    
+  
      -- clear  
      wait for 10 ns;
      reset <= '0';
      wait for 10 ns; 
      reset <= '1';
      wait for 10 ns;
-    
+  
     -- clock 
     clk <= not(clk);
     wait for 10 ns;
@@ -45,7 +46,7 @@ process
     wait for 10 ns;
     clk <= not(clk);
     wait for 10 ns;
-    
+  
     --  write
     loop 
     DIsel <= '0';
@@ -55,7 +56,7 @@ process
         test_in <= test_in + 1;
         wait for 15 ns;
    end loop;
-    
+  
     -- read 
     DIsel <= '1';
     for i in 0 to 3 loop
@@ -63,7 +64,7 @@ process
         Bsel <= std_logic_vector(to_unsigned(i+1,2));
         wait for 15 ns;
     end loop;
-    
+  
     -- disable write but try writing
     DIsel <= '1';
     for i in 0 to 3 loop 
@@ -72,7 +73,7 @@ process
         test_in <= test_in + 1;
         wait for 15 ns;
    end loop;
-   
+ 
    -- check to make sure nothing changed
    DIsel <= '1';
     for i in 0 to 3 loop
@@ -80,7 +81,7 @@ process
         Bsel <= std_logic_vector(to_unsigned(i+1,2));
         wait for 15 ns;
     end loop;
-    
+  
     end loop;
 end process;        
 end test_bench;

@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "E:/CENG342/project_8/project_8.srcs/sim_1/new/CCR.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'CCR'
-INFO: [VRFC 10-163] Analyzing VHDL file "E:/CENG342/project_8/project_8.srcs/sim_1/new/CCR_test.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'CCR_test'
