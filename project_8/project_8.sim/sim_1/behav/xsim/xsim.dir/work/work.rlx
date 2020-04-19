@@ -2,7 +2,11 @@
 2019.2
 Nov  6 2019
 21:57:16
+E:/CENG342/project_8/project_8.srcs/sim_1/new/CCR.vhd,1586813658,vhdl,,,,ccr,,,,,,,,
+E:/CENG342/project_8/project_8.srcs/sim_1/new/MAR.vhd,1586825282,vhdl,,,,mar,,,,,,,,
+E:/CENG342/project_8/project_8.srcs/sim_1/new/MCR.vhd,1586826853,vhdl,,,,mcr,,,,,,,,
+E:/CENG342/project_8/project_8.srcs/sim_1/new/MDR.vhd,1586826970,vhdl,,,,mdr,,,,,,,,
 E:/CENG342/project_8/project_8.srcs/sim_1/new/PC.vhd,1586827802,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/PC_test.vhd,,,pc,,,,,,,,
 E:/CENG342/project_8/project_8.srcs/sim_1/new/decoder.vhd,1586812594,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/register_file.vhd,,,decoder,,,,,,,,
-E:/CENG342/project_8/project_8.srcs/sim_1/new/generic_register.vhd,1586229631,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/register_file.vhd,,,generic_register,,,,,,,,
+E:/CENG342/project_8/project_8.srcs/sim_1/new/generic_register.vhd,1586999576,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/MAR.vhd;E:/CENG342/project_8/project_8.srcs/sim_1/new/MCR.vhd;E:/CENG342/project_8/project_8.srcs/sim_1/new/MDR.vhd,,,generic_register,,,,,,,,
 E:/CENG342/project_8/project_8.srcs/sim_1/new/register_file.vhd,1586830385,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/register_file_test.vhd,,,register_file,,,,,,,,

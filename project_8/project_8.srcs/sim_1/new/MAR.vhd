@@ -12,7 +12,6 @@ entity MAR is
 end MAR;
 
 architecture arch of MAR is
-
 begin
        MAR_register: entity work.generic_register(Behavioral)
     generic map( Bits => Bits)

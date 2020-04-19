@@ -1,6 +1,9 @@
 # compile vhdl design source files
-vhdl xil_defaultlib  \
+vhdl work  \
+"../../../../project_8.srcs/sim_1/new/generic_register.vhd" \
 "../../../../project_8.srcs/sim_1/new/CCR.vhd" \
+
+vhdl xil_defaultlib  \
 "../../../../project_8.srcs/sim_1/new/CCR_test.vhd" \
 
 # Do not sort compile order
