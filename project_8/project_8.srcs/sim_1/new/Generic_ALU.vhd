@@ -14,7 +14,7 @@ port(
         Z: OUT STD_LOGIC; -- zero result
         N: OUT STD_LOGIC; -- negative
         V: OUT STD_LOGIC; -- overflow
-        R: OUT UnSigned(N_Bit-1 downto 0)
+        R: OUT std_logic_vector(N_Bit-1 downto 0)
        -- Test: OUT UnSigned(N_Bit downto 0) 
      );
 end Generic_ALU;
@@ -87,6 +87,6 @@ process(Ax,Bx,F,Ci)
     end case;
 end process;
     -- Output of the fucntion inputed
-   R <= Rout(N_Bit-1 downto 0);
+   R <= std_logic_vector(Rout(N_Bit-1 downto 0));
    --Test <= Rout;
 end cheating;

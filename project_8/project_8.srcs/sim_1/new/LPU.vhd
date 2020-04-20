@@ -22,7 +22,7 @@ entity LPU is
             ALUfunc: in std_logic_vector(3 downto 0);
             MCtrl: in std_logic_vector(3 downto 0);
             CCRle: in std_logic;
-            Flags: in std_logic_vector(3 downto 0);
+            Flags: out std_logic_vector(3 downto 0);
             MARle, MCRle: in std_logic;
             Control: out std_logic_vector(3 downto 0);
             Adress: out std_logic_vector(Bits-1 downto 0);
@@ -32,11 +32,12 @@ end LPU;
 
 architecture arch of LPU is
     signal A_bus, B_bus, D_bus: std_logic_vector(Bits-1 downto 0);
-    signal A_alu, B_alu: std_logic_vector(Bits-1 downto 0);
+    signal A_alu, B_alu: unsigned;
     signal ALU_out: std_logic_vector(Bits-1 downto 0);
     signal PC_out: std_logic_vector(Bits-1 downto 0);
     signal CCR_in, CCR_out: std_logic_vector(3 downto 0);
-    signal Register_in: std_logic_vector(Bits-1 downto 0); 
+    signal Register_in: std_logic_vector(Bits-1 downto 0);
+    signal ALU_Ci: unsigned(0 downto 0); 
 begin
 
     MCR: entity work.MCR(arch) 
@@ -60,14 +61,18 @@ begin
     Flags <= CCR_out;
     
     -- 2 input muxes, select which gets loaded into alu input
-    A_alu <= A_bus when PCAsel = '0' else PC_out;
-    B_alu <= B_bus when IMMBsel = '0' else IMM;
-     
+    A_alu <= unsigned(A_bus) when PCAsel = '0' else unsigned(PC_out);
+    B_alu <= unsigned(B_bus) when IMMBsel = '0' else unsigned(IMM);
+    ALU_ci <= CCR_in(2); 
     ALU: entity work.Generic_ALU(cheating)
         generic map( N_bit => Bits)
-        port map( A => A_alu, B => B_alu, F => ALUfunc, Ci => CCR_out(2),
+        port map( A => A_alu, 
+        B => B_alu, 
+        F => ALUfunc, 
+        Ci => ALU_ci,
                     Co => CCR_in(2), Z => CCR_in(1), N => CCR_in(0), 
-                    V => CCR_in(3), R => ALU_out);
+                    V => CCR_in(3),
+                     R => ALU_out);
     
     PC: entity work.PC(arch)
         generic map( Bits => Bits, Increment => 2)
