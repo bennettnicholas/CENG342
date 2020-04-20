@@ -1,15 +1,15 @@
 # compile vhdl design source files
 vhdl work  \
-"../../../../../project_8/project_8.srcs/sim_1/new/LPU.vhd" \
 "../../../../../project_8/project_8.srcs/sim_1/new/generic_register.vhd" \
-"../../../../../project_8/project_8.srcs/sim_1/new/CCR.vhd" \
 "../../../../../project_8/project_8.srcs/sim_1/new/Generic_ALU.vhd" \
+"../../../../../project_8/project_8.srcs/sim_1/new/decoder.vhd" \
+"../../../../../project_8/project_8.srcs/sim_1/new/register_file.vhd" \
+"../../../../../project_8/project_8.srcs/sim_1/new/PC.vhd" \
+"../../../../../project_8/project_8.srcs/sim_1/new/CCR.vhd" \
 "../../../../../project_8/project_8.srcs/sim_1/new/MCR.vhd" \
 "../../../../../project_8/project_8.srcs/sim_1/new/MDR.vhd" \
 "../../../../../project_8/project_8.srcs/sim_1/new/MAR.vhd" \
-"../../../../../project_8/project_8.srcs/sim_1/new/PC.vhd" \
-"../../../../../project_8/project_8.srcs/sim_1/new/decoder.vhd" \
-"../../../../../project_8/project_8.srcs/sim_1/new/register_file.vhd" \
+"../../../../../project_8/project_8.srcs/sim_1/new/LPU.vhd" \
 
 vhdl xil_defaultlib  \
 "../../../../ccr_test.srcs/sim_1/new/LPU_test.vhd" \

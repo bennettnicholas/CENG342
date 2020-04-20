@@ -13,7 +13,6 @@ architecture bench of LPU_test is
    signal Dsel: std_logic_vector(Nsel-1 downto 0);
    signal DIsel: std_logic := '1';
    signal Dlen: std_logic := '1';
-   signal Din: std_logic_vector(Bits-1 downto 0);
    signal Data_in: std_logic_vector(Bits-1 downto 0);
    signal Data_out: std_logic_vector(Bits-1 downto 0);
    signal PCAsel: std_logic := '1';
@@ -49,11 +48,11 @@ begin
         port map( Asel => Asel, Bsel => Bsel, Dsel => Dsel,
                     DIsel => DIsel, Dlen => Dlen, 
                     Data_in => Data_in, Data_out => Data_out,
-                    PCAsel => PCAsel, PCie => PCie, 
+                    PCAsel => PCAsel, PCle => PCle, PCie => PCie, 
                     PCDsel => PCDsel, IMMBsel => IMMBsel,
                     IMM => IMM, ALUfunc => ALUfunc, 
                     MCtrl => MCtrl, CCRle => CCRle, Flags => Flags,
-                    MARle => MARle, MCRle => MCRle, Contorl => Control,
+                    MARle => MARle, MCRle => MCRle, Control => Control,
                     Adress => Adress, reset => reset, clk => clk);
     
     Clock: process

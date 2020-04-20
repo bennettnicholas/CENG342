@@ -33,7 +33,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="arty-a7-100"/>
-    <Option Name="WTXSimLaunchSim" Val="27"/>
+    <Option Name="WTXSimLaunchSim" Val="40"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -75,25 +75,37 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/LPU.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/generic_register.vhd">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/CCR.vhd">
+      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/Generic_ALU.vhd">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/Generic_ALU.vhd">
+      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/decoder.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/register_file.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/PC.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/CCR.vhd">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -117,19 +129,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/PC.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/decoder.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/register_file.vhd">
+      <File Path="$PPRDIR/../project_8/project_8.srcs/sim_1/new/LPU.vhd">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -186,7 +186,7 @@
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="xsim.simulate.runtime" Val="1000 ns"/>
+        <Option Name="xsim.simulate.runtime" Val="1200 ns"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
@@ -217,7 +217,9 @@
   <Runs Version="1" Minor="11">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
@@ -226,7 +228,9 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

@@ -13,7 +13,6 @@ entity LPU is
             Dsel: in std_logic_vector(Nsel-1 downto 0);
             DIsel: in std_logic;
             Dlen: in std_logic;
-            Din: in std_logic_vector(Bits-1 downto 0);
             Data_in: in std_logic_vector(Bits-1 downto 0);
             Data_out: out std_logic_vector(Bits-1 downto 0);
             PCAsel, PCie, PCle, PCDsel: in std_logic;
@@ -32,12 +31,12 @@ end LPU;
 
 architecture arch of LPU is
     signal A_bus, B_bus, D_bus: std_logic_vector(Bits-1 downto 0);
-    signal A_alu, B_alu: unsigned;
+    signal A_alu, B_alu: unsigned(Bits-1 downto 0);
     signal ALU_out: std_logic_vector(Bits-1 downto 0);
     signal PC_out: std_logic_vector(Bits-1 downto 0);
     signal CCR_in, CCR_out: std_logic_vector(3 downto 0);
-    signal Register_in: std_logic_vector(Bits-1 downto 0);
-    signal ALU_Ci: unsigned(0 downto 0); 
+    signal Register_in: std_logic_vector(Bits-1 downto 0); 
+    signal alu_ci: std_logic_vector(0 downto 0);
 begin
 
     MCR: entity work.MCR(arch) 
@@ -63,13 +62,13 @@ begin
     -- 2 input muxes, select which gets loaded into alu input
     A_alu <= unsigned(A_bus) when PCAsel = '0' else unsigned(PC_out);
     B_alu <= unsigned(B_bus) when IMMBsel = '0' else unsigned(IMM);
-    ALU_ci <= CCR_in(2); 
+    alu_ci(0) <= CCR_out(2); 
     ALU: entity work.Generic_ALU(cheating)
         generic map( N_bit => Bits)
         port map( A => A_alu, 
         B => B_alu, 
         F => ALUfunc, 
-        Ci => ALU_ci,
+        Ci => alu_ci,
                     Co => CCR_in(2), Z => CCR_in(1), N => CCR_in(0), 
                     V => CCR_in(3),
                      R => ALU_out);
