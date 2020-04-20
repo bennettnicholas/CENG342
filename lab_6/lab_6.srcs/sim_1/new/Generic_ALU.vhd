@@ -9,19 +9,19 @@ port(
         A: IN UnSigned(N_Bit-1 downto 0);
         B: IN UnSigned(N_bit-1 downto 0);
         F: IN STD_LOGIC_VECTOR(3 downto 0); 
-        Ci: IN UnSigned(0 downto 0);
+        Ci: IN std_logic_vector(0 downto 0);
         Co: OUT STD_LOGIC; -- carry out
         Z: OUT STD_LOGIC; -- zero result
         N: OUT STD_LOGIC; -- negative
         V: OUT STD_LOGIC; -- overflow
-        R: OUT UnSigned(N_Bit-1 downto 0)
+        R: OUT std_logic_vector(N_Bit-1 downto 0)
        -- Test: OUT UnSigned(N_Bit downto 0) 
      );
 end Generic_ALU;
 
 architecture cheating of Generic_ALU is
     -- must add 0's to this if you change the value
-    signal Rout: UnSigned(N_Bit downto 0) := "00000"; -- Upper bits are used to house the carry over
+    signal Rout: UnSigned(N_Bit downto 0) := (others => '0'); -- Upper bits are used to house the carry over
     signal overflow: STD_LOGIC;
     signal Ax: UnSigned(N_Bit downto 0);
     signal Bx: UnSigned(N_Bit downto 0);
@@ -72,9 +72,9 @@ process(Ax,Bx,F,Ci)
     begin
     case F is
     when "0000" => Rout <= Ax + Bx; -- add 
-    when "0010" => Rout <= Ax + Bx + ci; -- add with carry 
+    when "0010" => Rout <= Ax + Bx + unsigned(ci); -- add with carry 
     when "0100" => Rout <= Ax + NOT(Bx) + 1; -- subtract
-    when "0110" => Rout <= Ax + NOT(Bx) + 1 + Ci; -- subtract with carry
+    when "0110" => Rout <= Ax + NOT(Bx) + 1 + unsigned(Ci); -- subtract with carry
     when "1001" => Rout <= NOT(Bx); -- Not B
     when "1011" => Rout <= Ax AND Bx; -- A and B 
     when "1101" => Rout <= Ax OR Bx; -- A Or B 
@@ -87,6 +87,6 @@ process(Ax,Bx,F,Ci)
     end case;
 end process;
     -- Output of the fucntion inputed
-   R <= Rout(N_Bit-1 downto 0);
+   R <= std_logic_vector(Rout(N_Bit-1 downto 0));
    --Test <= Rout;
 end cheating;

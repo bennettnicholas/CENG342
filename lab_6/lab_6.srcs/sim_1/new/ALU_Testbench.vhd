@@ -9,9 +9,9 @@ end ALU_Testbench;
 architecture cheat_test of ALU_Testbench is
     signal A, B: UnSigned(N_Bit-1 downto 0);
     signal F: STD_LOGIC_VECTOR(3 downto 0);  
-    signal Ci: UnSigned(0 downto 0);
+    signal Ci: STD_logic_vector(0 downto 0);
     signal Co, Z, N, V: STD_LOGIC;
-    signal R: UnSigned(N_Bit-1 downto 0);
+    signal R: std_logic_vector(N_Bit-1 downto 0);
     --signal Test: UnSigned(N_Bit downto 0);
 begin
     uut: entity work.Generic_ALU(cheating)
