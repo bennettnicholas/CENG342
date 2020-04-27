@@ -1,7 +1,26 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 635397c302724b48bc83c18a8cb2b85f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L secureip --snapshot LPU_test_behav xil_defaultlib.LPU_test -log elaborate.log 
+Running: E:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 635397c302724b48bc83c18a8cb2b85f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L work -L secureip --snapshot LPU_test_behav xil_defaultlib.LPU_test -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity work.generic_register [\generic_register(bits=4)\]
+Compiling architecture arch of entity work.MCR [mcr_default]
+Compiling architecture behavioral of entity work.generic_register [\generic_register(bits=32)\]
+Compiling architecture arch of entity work.MDR [mdr_default]
+Compiling architecture arch of entity work.MAR [mar_default]
+Compiling architecture arch of entity work.CCR [ccr_default]
+Compiling architecture cheating of entity work.Generic_ALU [\Generic_ALU(n_bit=32)\]
+Compiling architecture arch of entity work.PC [\PC(bits=32)\]
+Compiling architecture behavioral of entity work.decoder [decoder_default]
+Compiling architecture behavioral of entity work.register_file [register_file_default]
+Compiling architecture arch of entity work.LPU [lpu_default]
+Compiling architecture bench of entity xil_defaultlib.lpu_test
+Built simulation snapshot LPU_test_behav

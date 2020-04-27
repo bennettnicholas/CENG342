@@ -1,0 +1,9 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 4bafb6461c5f41f085d28b71c93b36af --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L secureip --snapshot sequencer_test_behav xil_defaultlib.sequencer_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+ERROR: [XSIM 43-3249] File E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer_test.vhd, line 19. Unresolved signal "correct_state" is multiply driven.

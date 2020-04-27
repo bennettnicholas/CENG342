@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl work  \
+"../../../../lab_10.srcs/sim_1/new/BTU.vhd" \
+"../../../../lab_10.srcs/sim_1/new/instructions.vhd" \
+"../../../../lab_10.srcs/sim_1/new/Instruction_decoder.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../lab_10.srcs/sim_1/new/instruction_decoder_test.vhd" \
+
+# Do not sort compile order
+nosort

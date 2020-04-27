@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl work  \
+"../../../../lab_10.srcs/sim_1/new/my_package.vhd" \
+"../../../../lab_10.srcs/sim_1/new/sequencer.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../lab_10.srcs/sim_1/new/sequencer_test.vhd" \
+
+# Do not sort compile order
+nosort

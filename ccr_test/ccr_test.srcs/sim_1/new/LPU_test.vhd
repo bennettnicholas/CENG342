@@ -1,3 +1,4 @@
+-- Christain's Testbench code, used for helping debugg the IDE, slightly modified for our LPU
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;

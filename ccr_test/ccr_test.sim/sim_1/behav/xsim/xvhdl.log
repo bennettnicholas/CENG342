@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/CENG342/ccr_test/ccr_test.srcs/sim_1/new/wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/CENG342/ccr_test/ccr_test.srcs/sim_1/new/LPU_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'LPU_test'

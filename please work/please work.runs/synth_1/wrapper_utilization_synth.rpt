@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Mon Apr 20 18:50:54 2020
-| Host         : DESKTOP-R7M70QL running 64-bit major release  (build 9200)
+| Date         : Mon Apr 20 18:06:39 2020
+| Host         : DESKTOP-EAA4J5I running 64-bit major release  (build 9200)
 | Command      : report_utilization -file wrapper_utilization_synth.rpt -pb wrapper_utilization_synth.pb
 | Design       : wrapper
 | Device       : 7a100tcsg324-1

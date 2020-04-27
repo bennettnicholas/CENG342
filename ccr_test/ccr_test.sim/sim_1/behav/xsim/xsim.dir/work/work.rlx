@@ -4,7 +4,7 @@ Nov  6 2019
 21:57:16
 E:/CENG342/project_8/project_8.srcs/sim_1/new/CCR.vhd,1586813658,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/LPU.vhd,,,ccr,,,,,,,,
 E:/CENG342/project_8/project_8.srcs/sim_1/new/Generic_ALU.vhd,1587353483,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/LPU.vhd,,,generic_alu,,,,,,,,
-E:/CENG342/project_8/project_8.srcs/sim_1/new/LPU.vhd,1587354686,vhdl,E:/CENG342/ccr_test/ccr_test.srcs/sim_1/new/LPU_test.vhd,,,lpu,,,,,,,,
+E:/CENG342/project_8/project_8.srcs/sim_1/new/LPU.vhd,1587354686,vhdl,E:/CENG342/ccr_test/ccr_test.srcs/sim_1/new/LPU_test.vhd;E:/CENG342/ccr_test/ccr_test.srcs/sim_1/new/wrapper.vhd,,,lpu,,,,,,,,
 E:/CENG342/project_8/project_8.srcs/sim_1/new/MAR.vhd,1587000397,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/LPU.vhd,,,mar,,,,,,,,
 E:/CENG342/project_8/project_8.srcs/sim_1/new/MCR.vhd,1586826853,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/LPU.vhd,,,mcr,,,,,,,,
 E:/CENG342/project_8/project_8.srcs/sim_1/new/MDR.vhd,1586826970,vhdl,E:/CENG342/project_8/project_8.srcs/sim_1/new/LPU.vhd,,,mdr,,,,,,,,

@@ -1,0 +1,9 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/BTU.vhd,1587781419,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/Instruction_decoder.vhd,,,btu,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/Instruction_decoder.vhd,1588015293,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/instruction_decoder_test.vhd,,,instruction_decoder,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/instructions.vhd,1587781038,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/Instruction_decoder.vhd;E:/CENG342/lab_10/lab_10.srcs/sim_1/new/instruction_decoder_test.vhd,,,instructions,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/my_package.vhd,1588017478,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer.vhd;E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer_test.vhd,,,my_package,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer.vhd,1588023516,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer_test.vhd,,,sequencer,,,,,,,,
