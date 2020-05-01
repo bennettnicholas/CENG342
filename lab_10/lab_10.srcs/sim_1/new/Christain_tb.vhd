@@ -1,8 +1,8 @@
----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 -- Author: Christian Weaver
 -- Class: CENG-342
 -- Instructor: Dr. Pyeatt
--- Date: 04/16/2020
+-- Date: 04/29/2020
 -- Lab 10
 -- Design Name: LPU_instructionDecoder
 -- Project Name: Lab10
@@ -12,7 +12,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
-use work.instructions.ALL;
+use work.my_package.ALL;
 
 package instructionDecoderTestPKG is
 
@@ -58,6 +58,7 @@ package instructionDecoderTestPKG is
             Dsel: std_logic_vector(2 downto 0);
             IMM: std_logic_vector(31 downto 0);
             ALUfunc: std_logic_vector(3 downto 0);
+            Irle: std_logic;
             DIsel: std_logic;
             Dlen: std_logic;
             PCAsel: std_logic;
@@ -70,6 +71,9 @@ package instructionDecoderTestPKG is
             MCRle: std_logic;
             Byte: std_logic;
             Halfword: std_logic;
+            Memcen: std_logic;
+            Memoen: std_logic;
+            Memwen: std_logic;
             CLKen: std_logic;
         end record;
     
@@ -106,6 +110,7 @@ package body instructionDecoderTestPKG is
         if T = outputs.T and imm = outputs.imm and 
             Asel = outputs.Asel and Bsel = outputs.Bsel and 
             Dsel = outputs.Dsel and ALUfunc = outputs.ALUfunc and
+            control(Irle) = outputs.Irle and
             control(DIsel) = outputs.DIsel and
             control(immBsel) = outputs.immBsel and
             control(PCDsel) = outputs.PCDsel and
@@ -118,6 +123,9 @@ package body instructionDecoderTestPKG is
             control(MCRle) = outputs.MCRle and
             control(membyte) = outputs.Byte and
             control(memhalf) = outputs.Halfword and 
+            control(memcen) = outputs.memcen and 
+            control(memoen) = outputs.memoen and 
+            control(memwen) = outputs.memwen and 
             control(clken) = outputs.CLKen then
             return '1';
         else
@@ -130,23 +138,23 @@ end package body instructionDecoderTestPKG;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
-use work.instructions.ALL;
+use work.my_package.ALL;
 use work.instructionDecoderTestPKG.all;
 
 entity LPU_instructionDecoder_TB is
 end LPU_instructionDecoder_TB;
 
 architecture tb_arch of LPU_instructionDecoder_TB is
-    signal I : std_logic_vector(15 downto 0); -- instruction to decode
-    signal Flags: std_logic_vector(3 downto 0); -- stores flags from CCR
-    signal T : instruction_t; -- instruction type
-    signal imm: std_logic_vector(31 downto 0); -- immediate data field
-    signal Asel: std_logic_vector(2 downto 0); -- select for register A
-    signal Bsel: std_logic_vector(2 downto 0); -- select for register B
-    signal Dsel: std_logic_vector(2 downto 0); -- select for register D
-    signal ALUfunc: std_logic_vector(3 downto 0); -- function for ALU
-    signal control: control_t_array := (others=>'0'); -- Mux and register enable signals
-
+        signal I : std_logic_vector(15 downto 0); -- instruction to decode
+        signal T : instruction_t; -- instruction type
+        signal Flags:  std_logic_vector(3 downto 0);
+        signal imm: std_logic_vector(31 downto 0); -- immediate data field
+        signal Asel: std_logic_vector(2 downto 0); -- select for register A
+        signal Bsel: std_logic_vector(2 downto 0); -- select for register B
+        signal Dsel: std_logic_vector(2 downto 0); -- select for register D
+        signal ALUfunc: std_logic_vector(3 downto 0); -- function for ALU
+        signal control: control_t_array := (others => '0'); -- Mux and register enable signals
+        
     signal curTest: tests_t; -- this displays the current test being run in the waveform
     signal instructions: tests_t_array; -- store the instructions to test
     signal outputs: outputs_t_array; -- stores teh correct output for each instruction
@@ -190,6 +198,7 @@ begin
         Dsel => "111",
         IMM => (others=>'1'),
         ALUfunc => "0100",
+        Irle => '1',
         DIsel => '1',
         Dlen => '1',
         PCAsel => '0',
@@ -202,7 +211,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(CMPR2) <= (
         T => CMPR,
@@ -211,6 +223,7 @@ begin
         Dsel => "111",
         IMM => (others=>'1'),
         ALUfunc => "0100",
+        Irle => '1',
         DIsel => '1',
         Dlen => '1',
         PCAsel => '0',
@@ -223,15 +236,19 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(CMPI1) <= (
         T => CMPI,
         Asel => "111",
         Bsel => "111",
         Dsel => "111",
-        IMM => "00000000000000000000000001100000",
+        IMM => "11111111111111111111111111100000",
         ALUfunc => "0100",
+        Irle => '1',
         DIsel => '1',
         Dlen => '1',
         PCAsel => '0',
@@ -244,15 +261,19 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(CMPI2) <= (
         T => CMPI,
         Asel => "101",
         Bsel => "111",
         Dsel => "111",
-        IMM => "00000000000000000000000001000000",
+        IMM => "11111111111111111111111111000000",
         ALUfunc => "0100",
+        Irle => '1',
         DIsel => '1',
         Dlen => '1',
         PCAsel => '0',
@@ -265,7 +286,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(RR1) <= (
         T => RR,
@@ -274,6 +298,7 @@ begin
         Dsel => "010",
         IMM => (others=>'1'),
         ALUfunc => "1001",
+        Irle => '1',
         DIsel => '0',
         Dlen => '0',
         PCAsel => '0',
@@ -286,7 +311,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(RR2) <= (
         T => RR,
@@ -295,6 +323,7 @@ begin
         Dsel => "010",
         IMM => (others=>'1'),
         ALUfunc => "1010",
+        Irle => '1',
         DIsel => '0',
         Dlen => '0',
         PCAsel => '0',
@@ -307,7 +336,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(RRR1) <= (
         T => RRR,
@@ -316,6 +348,7 @@ begin
         Dsel => "000",
         IMM => (others=>'1'),
         ALUfunc => "0010",
+        Irle => '1',
         DIsel => '0',
         Dlen => '0',
         PCAsel => '0',
@@ -328,7 +361,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(RRR2) <= (
         T => RRR,
@@ -337,6 +373,7 @@ begin
         Dsel => "101",
         IMM => (others=>'1'),
         ALUfunc => "1111",
+        Irle => '1',
         DIsel => '0',
         Dlen => '0',
         PCAsel => '0',
@@ -349,7 +386,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(RI1) <= (
         T => RI,
@@ -358,6 +398,7 @@ begin
         Dsel => "000",
         IMM => "00000000000000000000000011111111",
         ALUfunc => "1101",
+        Irle => '1',
         DIsel => '0',
         Dlen => '0',
         PCAsel => '0',
@@ -370,7 +411,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(RI2) <= (
         T => RI,
@@ -379,6 +423,7 @@ begin
         Dsel => "010",
         IMM => "00000000000000000000000011111111",
         ALUfunc => "1000",
+        Irle => '1',
         DIsel => '0',
         Dlen => '0',
         PCAsel => '0',
@@ -391,7 +436,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(RRI1) <= (
         T => RRI,
@@ -400,6 +448,7 @@ begin
         Dsel => "000",
         IMM => (others=>'0'),
         ALUfunc => "1110",
+        Irle => '1',
         DIsel => '0',
         Dlen => '0',
         PCAsel => '0',
@@ -412,15 +461,19 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(RRI2) <= (
         T => RRI,
         Asel => "000",
         Bsel => "111",
         Dsel => "111",
-        IMM => "00000000000000000000000000011111",
+        IMM => "11111111111111111111111111111111",
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '0',
         Dlen => '0',
         PCAsel => '0',
@@ -433,7 +486,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(PCRL1) <= (
         T => PCRL,
@@ -442,6 +498,7 @@ begin
         Dsel => "000",
         IMM => "00000000000000000000000000011110",
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '1',
         Dlen => '0',
         PCAsel => '1',
@@ -454,7 +511,10 @@ begin
         MCRle => '0',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '0',
+        Memoen => '0',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(PCRL2) <= (
         T => PCRL,
@@ -463,6 +523,7 @@ begin
         Dsel => "001",
         IMM => "00000000000000000000000111111110",
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '1',
         Dlen => '0',
         PCAsel => '1',
@@ -475,15 +536,19 @@ begin
         MCRle => '0',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '0',
+        Memoen => '0',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(LOAD1) <= (
         T => LOAD,
         Asel => "000",
         Bsel => "111",
         Dsel => "101",
-        IMM => "00000000000000000000000000111111",
+        IMM => "11111111111111111111111111111111",
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '1',
         Dlen => '0',
         PCAsel => '0',
@@ -496,7 +561,10 @@ begin
         MCRle => '0',
         Byte => '0',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '0',
+        Memoen => '0',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(LOAD2) <= (
         T => LOAD,
@@ -505,6 +573,7 @@ begin
         Dsel => "001",
         IMM => (others=>'0'),
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '1',
         Dlen => '0',
         PCAsel => '0',
@@ -517,15 +586,19 @@ begin
         MCRle => '0',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '0',
+        Memoen => '0',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(STORE1) <= (
         T => STORE,
         Asel => "000",
         Bsel => "101",
         Dsel => "111",
-        IMM => "00000000000000000000000000111111",
+        IMM => "11111111111111111111111111111111",
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '1',
         Dlen => '1',
         PCAsel => '0',
@@ -538,7 +611,10 @@ begin
         MCRle => '0',
         Byte => '0',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '0',
+        Memoen => '1',
+        Memwen => '0',
+        CLKen => '1'
         );
     outputs(STORE2) <= (
         T => STORE,
@@ -547,6 +623,7 @@ begin
         Dsel => "111",
         IMM => "00000000000000000000000000000100",
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '1',
         Dlen => '1',
         PCAsel => '0',
@@ -559,7 +636,10 @@ begin
         MCRle => '0',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '0',
+        Memoen => '1',
+        Memwen => '0',
+        CLKen => '1'
         );
     outputs(BR1) <= (
         T => BR,
@@ -568,6 +648,7 @@ begin
         Dsel => "111",
         IMM => (others=>'0'),
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '0',
         Dlen => '1',
         PCAsel => '0',
@@ -580,7 +661,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(BR2) <= (
         T => BR,
@@ -589,6 +673,7 @@ begin
         Dsel => "111",
         IMM => (others=>'0'),
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '0',
         Dlen => '0',
         PCAsel => '0',
@@ -601,15 +686,19 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(BPCR1) <= (
         T => BPCR,
         Asel => "111",
         Bsel => "111",
         Dsel => "111",
-        IMM => "00000000000000000000000011111110",
+        IMM => "11111111111111111111111111111110",
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '0',
         Dlen => '1',
         PCAsel => '1',
@@ -622,7 +711,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(BPCR2) <= (
         T => BPCR,
@@ -631,6 +723,7 @@ begin
         Dsel => "111",
         IMM => (others=>'0'),
         ALUfunc => "0000",
+        Irle => '1',
         DIsel => '0',
         Dlen => '1',
         PCAsel => '1',
@@ -643,7 +736,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '0'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '1'
         );
     outputs(HCF1) <= (
         T => HCF,
@@ -652,6 +748,7 @@ begin
         Dsel => "111",
         IMM => (others=>'1'),
         ALUfunc => "1111",
+        Irle => '1',
         DIsel => '1',
         Dlen => '1',
         PCAsel => '1',
@@ -664,7 +761,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '1'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '0'
         );
     outputs(HCF2) <= (
         T => HCF,
@@ -673,6 +773,7 @@ begin
         Dsel => "111",
         IMM => (others=>'1'),
         ALUfunc => "1111",
+        Irle => '1',
         DIsel => '1',
         Dlen => '1',
         PCAsel => '1',
@@ -685,7 +786,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '1'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '0'
         );
     outputs(ILLEGAL1) <= (
         T => ILLEGAL,
@@ -694,6 +798,7 @@ begin
         Dsel => "111",
         IMM => (others=>'1'),
         ALUfunc => "1111",
+        Irle => '1',
         DIsel => '1',
         Dlen => '1',
         PCAsel => '1',
@@ -706,7 +811,10 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '1'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '0'
         );
     outputs(ILLEGAL2) <= (
         T => ILLEGAL,
@@ -715,6 +823,7 @@ begin
         Dsel => "111",
         IMM => (others=>'1'),
         ALUfunc => "1111",
+        Irle => '1',
         DIsel => '1',
         Dlen => '1',
         PCAsel => '1',
@@ -727,28 +836,21 @@ begin
         MCRle => '1',
         Byte => '1',
         Halfword => '1',
-        CLKen => '1'
+        Memcen => '1',
+        Memoen => '1',
+        Memwen => '1',
+        CLKen => '0'
         );
 
-    decoder:
-        entity work.instruction_decoder(arch)
+    
+    instruction_decoder: entity work.instruction_decoder(arch)
         port map(
-            I => I,
-            Flags => Flags,
-            T => T,
-            imm => imm,
-            Asel => Asel,
-            Bsel => Bsel,
-            Dsel => Dsel,
-            ALUfunc => ALUfunc,
-            control => control        
-            );
-     
-     -- set static values for the CCR values   
-     Flags(0) <= '1';
-     Flags(1) <= '0';
-     Flags(2) <= '0';
-     Flags(3) <= '1';       
+                    I => I, Flags => Flags, T => T, imm => imm,
+                    Asel => Asel, Bsel => Bsel, Dsel => Dsel,
+                    ALUfunc => ALUfunc, control => control
+                 );
+    
+    Flags <= "1001";
             
     test: process
     begin

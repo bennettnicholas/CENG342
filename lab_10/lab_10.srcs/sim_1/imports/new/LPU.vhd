@@ -19,11 +19,11 @@ entity LPU is
             IMMBsel: in std_logic;
             IMM: in std_logic_vector(Bits-1 downto 0);
             ALUfunc: in std_logic_vector(3 downto 0);
-            MCtrl: in std_logic_vector(3 downto 0);
+            MCtrl: in std_logic_vector(4 downto 0);
             CCRle: in std_logic;
             Flags: out std_logic_vector(3 downto 0);
             MARle, MCRle: in std_logic;
-            Control: out std_logic_vector(3 downto 0);
+            Control: out std_logic_vector(4 downto 0);
             Adress: out std_logic_vector(Bits-1 downto 0);
             reset, clk: in std_logic
           );

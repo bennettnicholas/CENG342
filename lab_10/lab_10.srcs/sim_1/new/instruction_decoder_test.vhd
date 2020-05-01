@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use work.instructions.ALL;
+use work.my_package.ALL;
 
 entity instruction_decoder_test is
 end instruction_decoder_test;

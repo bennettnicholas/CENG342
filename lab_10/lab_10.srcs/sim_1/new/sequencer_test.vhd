@@ -21,8 +21,7 @@ architecture bench of sequencer_test is
     
      
 begin
-    CWin <= (others => '1');
-    correct_state <= START;
+    
     
     sequencer: entity work.sequencer(arch)
         port map (
@@ -42,12 +41,16 @@ begin
     --test 
     Test: process 
         begin 
+        
+        CWin <= (others => '1');
+        CWin(Irle) <= '0';
             -- reboot
-            wait for 15 ns;
+            wait for 10 ns;
             reset <= '0';
-            wait for 5 ns;
+            wait for 10 ns;
             
             -- Start loop 
+            correct_state <= START;
             correct_CWout <= START_cw;
             wait for 10 ns;
             
@@ -80,8 +83,7 @@ begin
             wait for 10 ns;
             
             -- FETCH 2 loop
-            Mrts <= '1';
-            Mrte <= '0';
+            Mrte <= '1';
             wait for 10 ns;
             correct_state <= FETCH2;
             correct_CWout <= FETCH2_cw;
@@ -127,11 +129,28 @@ begin
             correct_CWout <= CWin;
             wait for 10 ns;
             
-            -- EX1 to FETCH 2 
+            -- EX1 to FETCH1
+            Mrts <= '0';
+            T <= RR;
+            wait for 10 ns;
+            correct_state <= FETCH1;
+            correct_CWout <= FETCH1_cw;
+            wait for 10 ns;
+            
+            -- FETCH1 to FETCH 2 
             Mrte <= '1';
             wait for 10 ns;
             correct_state <= FETCH2;
             correct_CWout <= FETCH2_cw;
+            wait for 10 ns;
+            
+            --FETCH2 to EX1
+            Mrts <= '0';
+            Mrte <= '0';
+            T <= LOAD;
+            wait for 10 ns;
+            correct_state <= EX1;
+            correct_CWout <= CWin;
             wait for 10 ns;
             
             -- EX1 to LSDT

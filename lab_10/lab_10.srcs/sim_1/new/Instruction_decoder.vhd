@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use work.instructions.ALL;
+use work.my_package.ALL;
 
 entity instruction_decoder is
 port(
@@ -20,9 +20,18 @@ port(
 architecture arch of instruction_decoder is
     constant zero_vec: std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
     signal line_T: instruction_t;  
-    signal take_branch: std_logic; -- input from BTU  
+    signal take_branch: std_logic; -- input from BTU 
+    signal CMP_imm : std_logic_vector(6 downto 0);
+    signal RI_imm  : std_logic_vector(7 downto 0);
+    signal RRI_imm : std_logic_vector(4 downto 0);
+    signal PCRL_imm: std_logic_vector(8 downto 0);
+    signal BPCR_imm: std_logic_vector(7 downto 0);
+    signal LDST_imm0: std_logic_vector(5 downto 0);
+    signal LDST_imm1: std_logic_vector(6 downto 0);
+    signal LDST_imm2: std_logic_vector(7 downto 0);
 begin
-
+    --Pyeatt cheaty's doodles 
+    
     -- BTU 
     BTU: entity work.BTU(sanity_check)
     port map (N => Flags(0), 
@@ -77,23 +86,33 @@ begin
             "111" when line_T = BPCR else
             "111" when line_T = HCF else
             "111"; -- just in case they add something
-            
+    
+    -- assinging values 
+     CMP_imm <= I(12 downto 11) & I(7 downto 3);
+     RI_imm <= I(10 downto 3); 
+     RRI_imm <= I(10 downto 6);
+     PCRL_imm <= I(13 downto 6) & '0';
+     BPCR_imm <= I(6 downto 0) & '0'; 
+     LDST_imm0 <= I(13 downto 8);
+     LDST_imm1 <= I(13 downto 8) & '0'; 
+     LDST_imm2 <= I(13 downto 8) & "00";
+                
     -- IMM
-    IMM <= (others=>'1') when line_T = CMPR else 
-            zero_vec(24 downto 0) & I(12 downto 11) & I(7 downto 3) when line_T = CMPI else
+    IMM <= (others=>'1') when line_T = CMPR else  
+            std_logic_vector(resize(signed(CMP_imm),32)) when line_T = CMPI else
             (others=>'1') when line_T = RR else
             (others=>'1') when line_T = RRR else
-            zero_vec(23 downto 0) & I(10 downto 3) when line_T = RI else
-            zero_vec(26 downto 0) & I(10 downto 6) when line_T = RRI else
-            zero_vec(22 downto 0) & I(13 downto 6) & '0' when line_T = PCRL else
-            zero_vec(25 downto 0) & I(13 downto 8) when line_T = LOAD AND I(7 downto 6) = "00" else
-            zero_vec(24 downto 0) & I(13 downto 8) & '0' when line_T = LOAD AND I(7 downto 6) = "01" else
-            zero_vec(23 downto 0) & I(13 downto 8) & "00" when line_T = LOAD AND I(7 downto 6) = "10" else
-            zero_vec(25 downto 0) & I(13 downto 8) when line_T = STORE AND I(7 downto 6) = "00" else
-            zero_vec(24 downto 0) & I(13 downto 8) & '0' when line_T = STORE AND I(7 downto 6) = "01" else
-            zero_vec(23 downto 0) & I(13 downto 8) & "00" when line_T = STORE AND I(7 downto 6) = "10" else
+            std_logic_vector(resize(signed(RI_imm),32)) when line_T = RI else
+            std_logic_vector(resize(signed(RRI_imm),32)) when line_T = RRI else
+            std_logic_vector(resize(signed(PCRL_imm),32)) when line_T = PCRL else
+            std_logic_vector(resize(signed(LDST_imm0),32)) when line_T = LOAD AND I(7 downto 6) = "00" else
+            std_logic_vector(resize(signed(LDST_imm1),32)) when line_T = LOAD AND I(7 downto 6) = "01" else
+            std_logic_vector(resize(signed(LDST_imm2),32)) when line_T = LOAD AND I(7 downto 6) = "10" else
+            std_logic_vector(resize(signed(LDST_imm0),32)) when line_T = STORE AND I(7 downto 6) = "00" else
+            std_logic_vector(resize(signed(LDST_imm1),32)) when line_T = STORE AND I(7 downto 6) = "01" else
+            std_logic_vector(resize(signed(LDST_imm2),32)) when line_T = STORE AND I(7 downto 6) = "10" else
             (others=>'0')  when line_T = BR else
-            zero_vec(23 downto 0) & I(6 downto 0) & '0' when line_T = BPCR else
+            std_logic_vector(resize(signed(BPCR_imm),32)) when line_T = BPCR else
             (others=>'1') when line_T = HCF else
             (others=>'1');
             
