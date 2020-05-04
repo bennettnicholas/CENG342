@@ -8,21 +8,18 @@ end CPU_test;
 
 architecture Bench of CPU_test is
    signal clock : std_logic := '0';
-   signal reset : std_logic; -- active low
+   signal reset : std_logic := '0'; -- active low
    signal Mcen :  std_logic; -- active low
    signal Moen : std_logic; -- active low
    signal Mwen : std_logic; -- active low
    signal Mbyte : std_logic; -- active low
    signal Mhalf : std_logic; -- active low
-   signal Mrts : std_logic; -- active low
-   signal Mrte : std_logic; -- active low
+   signal Mrts : std_logic := '1'; -- active low
+   signal Mrte : std_logic := '1'; -- active low
    signal MAddr : std_logic_vector(31 downto 0);
    signal MDatao : std_logic_vector(31 downto 0);
    signal MDatai : std_logic_vector(31 downto 0);
-   signal current_state, next_state: state_t;
-   signal control: control_t_array;
-   signal instruction: instruction_t;
-    
+   
 begin
 
     CPU: entity work.CPU(arch)
@@ -38,7 +35,7 @@ begin
                   Mrte => Mrte,
                   MAddr => MAddr,
                   MDatao => MDatao,
-                  MDatai => MDatai
+                  MDatai => MDatai 
                 );
                 
     --start clock
@@ -56,8 +53,32 @@ begin
         reset <= '0';
         wait for 10 ns;
         reset <= '1';
-        wait for 10 ns;
+        wait;
     end process;
     
     --write test actual test code
+    process
+    
+    begin 
+    --move 0x44 to R0 
+    MDatai <= "00000000000000000000000001000100";
+    Mrts <= '0';
+    wait for 20 ns;
+    Mrts <= '0';
+    wait for 10 ns;
+    Mrts <= '0';
+    -- move 0x55 to R1
+    MDatai <= "00000000000000001100001010101001"; 
+    wait for 20 ns;
+   
+    -- switch states
+    Mrts <= '1';
+    wait for 20 ns;
+    
+     -- R0 OR 55 = 55
+    MDatai <= "00000000000000001101001010101000";
+    wait for 20 ns;
+    end process;
+    
+    --good enough yeet into big CPU 
 end Bench;

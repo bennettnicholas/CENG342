@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1588570189">
+  <File Type="BITSTR-BMM" Name="Computer_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Computer_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Computer_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="Computer_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Computer.tcl"/>
+  <File Type="OPT-TIMING" Name="Computer_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Computer_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="Computer_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Computer_reports.tcl"/>
+  <File Type="OPT-DRC" Name="Computer_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Computer.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Computer_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Computer_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Computer_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Computer_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Computer_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Computer_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Computer_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Computer_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Computer_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Computer_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Computer_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="Computer_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Computer_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Computer.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Computer_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Computer_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Computer_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="Computer.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="Computer_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Computer_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Computer_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Computer_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Computer_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Computer_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Computer_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="Computer.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Computer_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Computer_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Computer_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Computer_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Computer_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Computer_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Computer_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Computer_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Computer_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Computer_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Computer_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Computer_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Computer_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Computer_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Computer_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Computer_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Computer_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Computer_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Computer_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Computer_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Computer_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="Computer.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Computer_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="Computer.rbt"/>
+  <File Type="BITSTR-NKY" Name="Computer.nky"/>
+  <File Type="PDI-FILE" Name="Computer.pdi"/>
+  <File Type="RCFI_FILE" Name="Computer.rcfi"/>
+  <File Type="CFI_FILE" Name="Computer.cfi"/>
+  <File Type="RNPI_FILE" Name="Computer.rnpi"/>
+  <File Type="NPI_FILE" Name="Computer.npi"/>
+  <File Type="RBD_FILE" Name="Computer.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Computer.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Computer.sysdef"/>
+  <File Type="BG-BGN" Name="Computer.bgn"/>
+  <File Type="BG-DRC" Name="Computer.drc"/>
+  <File Type="RDI-RDI" Name="Computer.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Computer_package/Memory_NO_DDR.edf">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/Memory_NO_DDR.edf"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/new/BTU.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/new/BTU.vhd"/>
+        <Attr Name="ImportTime" Val="1587781419"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/generic_register.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/generic_register.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/CCR.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/CCR.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/new/my_package.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/new/my_package.vhd"/>
+        <Attr Name="ImportTime" Val="1588321878"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/new/Instruction_decoder.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/new/Instruction_decoder.vhd"/>
+        <Attr Name="ImportTime" Val="1588321117"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/new/sequencer.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/new/sequencer.vhd"/>
+        <Attr Name="ImportTime" Val="1588100976"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/MCR.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/MCR.vhd"/>
+        <Attr Name="ImportTime" Val="1588323996"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/MDR.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/MDR.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/MAR.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/MAR.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/Generic_ALU.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/PC.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/PC.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/decoder.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/decoder.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/register_file.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/register_file.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/LPU.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/LPU.vhd"/>
+        <Attr Name="ImportTime" Val="1588324424"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/new/CPU.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/new/CPU.vhd"/>
+        <Attr Name="ImportTime" Val="1588363266"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Computer_package/Computer.vhdl">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/Computer.vhdl"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Computer_package/ddr2_model_parameters.vh">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/ddr2_model_parameters.vh"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Computer_package/ddr2_model.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/ddr2_model.v"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Computer"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Computer_package/DDR2.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/DDR2.xdc"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/Nexys-A7-100T-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/Computer_package/bitstream_settings.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/bitstream_settings.xdc"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Computer_package/bitstream_settings.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Performance_ExplorePostRoutePhysOpt" Flow="Vivado Implementation 2019">
+      <Desc>Similar to Peformance_Explore, but enables the physical optimization step (phys_opt_design) with the Explore directive after routing.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="route_design">
+      <Option Id="Directive">0</Option>
+      <Option Id="MoreOptsStr"><![CDATA[-tns_cleanup]]></Option>
+    </Step>
+    <Step Id="post_route_phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>

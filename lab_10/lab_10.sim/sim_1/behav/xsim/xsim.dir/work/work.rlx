@@ -2,8 +2,19 @@
 2019.2
 Nov  6 2019
 21:57:16
+E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/CCR.vhd,1587426816,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/LPU.vhd,,,ccr,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/Generic_ALU.vhd,1587426816,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/LPU.vhd,,,generic_alu,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/LPU.vhd,1588324424,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU.vhd,,,lpu,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/MAR.vhd,1587426816,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/LPU.vhd,,,mar,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/MCR.vhd,1588323996,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/LPU.vhd,,,mcr,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/MDR.vhd,1587426816,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/LPU.vhd,,,mdr,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/PC.vhd,1587426816,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/LPU.vhd,,,pc,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/decoder.vhd,1587426816,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/register_file.vhd,,,decoder,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/generic_register.vhd,1587426816,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/CCR.vhd;E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/MAR.vhd;E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/MCR.vhd;E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/MDR.vhd;E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/register_file.vhd;E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU.vhd,,,generic_register,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/register_file.vhd,1587426816,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/LPU.vhd,,,register_file,,,,,,,,
 E:/CENG342/lab_10/lab_10.srcs/sim_1/new/BTU.vhd,1587781419,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/Instruction_decoder.vhd,,,btu,,,,,,,,
-E:/CENG342/lab_10/lab_10.srcs/sim_1/new/Instruction_decoder.vhd,1588317839,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/instruction_decoder_test.vhd,,,instruction_decoder,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU.vhd,1588363266,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU_test.vhd,,,cpu,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/Instruction_decoder.vhd,1588321117,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU.vhd,,,instruction_decoder,,,,,,,,
 E:/CENG342/lab_10/lab_10.srcs/sim_1/new/instructions.vhd,1587781038,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/Instruction_decoder.vhd;E:/CENG342/lab_10/lab_10.srcs/sim_1/new/instruction_decoder_test.vhd,,,instructions,,,,,,,,
-E:/CENG342/lab_10/lab_10.srcs/sim_1/new/my_package.vhd,1588034438,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer.vhd;E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer_test.vhd,,,my_package,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/my_package.vhd,1588321878,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer.vhd;E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer_test.vhd,,,my_package,,,,,,,,
 E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer.vhd,1588100976,vhdl,E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer_test.vhd,,,sequencer,,,,,,,,

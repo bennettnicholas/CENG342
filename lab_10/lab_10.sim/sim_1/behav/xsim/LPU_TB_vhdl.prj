@@ -1,9 +1,22 @@
 # compile vhdl design source files
 vhdl work  \
+"../../../../lab_10.srcs/sim_1/new/BTU.vhd" \
 "../../../../lab_10.srcs/sim_1/imports/new/generic_register.vhd" \
+"../../../../lab_10.srcs/sim_1/imports/new/CCR.vhd" \
+"../../../../lab_10.srcs/sim_1/new/my_package.vhd" \
+"../../../../lab_10.srcs/sim_1/new/Instruction_decoder.vhd" \
+"../../../../lab_10.srcs/sim_1/new/sequencer.vhd" \
+"../../../../lab_10.srcs/sim_1/imports/new/MCR.vhd" \
+"../../../../lab_10.srcs/sim_1/imports/new/MDR.vhd" \
+"../../../../lab_10.srcs/sim_1/imports/new/MAR.vhd" \
+"../../../../lab_10.srcs/sim_1/imports/new/Generic_ALU.vhd" \
+"../../../../lab_10.srcs/sim_1/imports/new/PC.vhd" \
+"../../../../lab_10.srcs/sim_1/imports/new/decoder.vhd" \
+"../../../../lab_10.srcs/sim_1/imports/new/register_file.vhd" \
+"../../../../lab_10.srcs/sim_1/imports/new/LPU.vhd" \
+"../../../../lab_10.srcs/sim_1/new/CPU.vhd" \
 
 vhdl xil_defaultlib  \
-"../../../../lab_10.srcs/sim_1/new/CPU.vhd" \
 "../../../../lab_10.srcs/sim_1/new/christians_cpu_tb.vhd" \
 
 # Do not sort compile order

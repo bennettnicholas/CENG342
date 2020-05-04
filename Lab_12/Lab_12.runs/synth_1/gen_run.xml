@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1588570189">
+  <File Type="PA-TCL" Name="Computer.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Computer_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Computer_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Computer.vds"/>
+  <File Type="RDS-UTIL" Name="Computer_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Computer_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Computer.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Computer_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Computer_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Computer_package/Memory_NO_DDR.edf">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/Memory_NO_DDR.edf"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/new/BTU.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/new/BTU.vhd"/>
+        <Attr Name="ImportTime" Val="1587781419"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/generic_register.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/generic_register.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/CCR.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/CCR.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/new/my_package.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/new/my_package.vhd"/>
+        <Attr Name="ImportTime" Val="1588321878"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/new/Instruction_decoder.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/new/Instruction_decoder.vhd"/>
+        <Attr Name="ImportTime" Val="1588321117"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/new/sequencer.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/new/sequencer.vhd"/>
+        <Attr Name="ImportTime" Val="1588100976"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/MCR.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/MCR.vhd"/>
+        <Attr Name="ImportTime" Val="1588323996"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/MDR.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/MDR.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/MAR.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/MAR.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/Generic_ALU.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/PC.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/PC.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/decoder.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/decoder.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/register_file.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/register_file.vhd"/>
+        <Attr Name="ImportTime" Val="1587426816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/imports/new/LPU.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/imports/new/LPU.vhd"/>
+        <Attr Name="ImportTime" Val="1588324424"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim_1/new/CPU.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab_10/lab_10.srcs/sim_1/new/CPU.vhd"/>
+        <Attr Name="ImportTime" Val="1588363266"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Computer_package/Computer.vhdl">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/Computer.vhdl"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Computer_package/ddr2_model_parameters.vh">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/ddr2_model_parameters.vh"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Computer_package/ddr2_model.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/ddr2_model.v"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Computer"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Computer_package/DDR2.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/DDR2.xdc"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/Nexys-A7-100T-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/Computer_package/bitstream_settings.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Default.DESKTOP-EAA4J5I/Desktop/Computer_package/Computer_package/bitstream_settings.xdc"/>
+        <Attr Name="ImportTime" Val="1588525222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Computer_package/bitstream_settings.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2019">
+      <Desc>Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold</Desc>
+    </StratHandle>
+    <Step Id="synth_design">
+      <Option Id="ShregMinSize">5</Option>
+      <Option Id="RepFanoutThreshold">400</Option>
+      <Option Id="ResourceSharing">2</Option>
+      <Option Id="KeepEquivalentRegisters">1</Option>
+      <Option Id="NoCombineLuts">1</Option>
+      <Option Id="FsmExtraction">1</Option>
+      <Option Id="Directive">7</Option>
+    </Step>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>

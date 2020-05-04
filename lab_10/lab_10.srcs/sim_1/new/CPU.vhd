@@ -16,11 +16,16 @@ entity CPU is
         Mrte : in std_logic; -- active low
         MAddr : out std_logic_vector(31 downto 0);
         MDatao : out std_logic_vector(31 downto 0);
+        --ALU_test: out std_logic_vector(3 downto 0);
         MDatai : in std_logic_vector(31 downto 0)
         );
 end CPU;
 
 architecture arch of CPU is
+    attribute mark_debug: string;
+    signal alu_f: std_logic_vector(3 downto 0);
+    attribute mark_debug of alu_f : signal is "true";
+      
     signal T_line: instruction_t;
     signal I_line: std_logic_vector(15 downto 0);
     signal Flags_line: std_logic_vector(3 downto 0);
@@ -29,10 +34,11 @@ architecture arch of CPU is
     signal Bsel_line: std_logic_vector(2 downto 0);
     signal Dsel_line: std_logic_vector(2 downto 0);
     signal ALUfunc_line: std_logic_vector(3 downto 0);
-    signal CWin_line: control_t_array; -- CW_SQ_ID
-    signal CWout_line: control_t_array;-- CW_SQ_DP
+    signal CWin_line: control_t_array; -- CW_ID
+    signal CWout_line: control_t_array;-- CW_DP
     
 begin
+       -- ALU_test <= ALUfunc_line;
         -- need the register to hold the instruction
         Instruction_register: entity work.generic_register(Behavioral)
         generic map( bits => 16)
@@ -104,5 +110,4 @@ begin
                     reset => reset,
                     clk => clock
                  );
-        
 end arch;

@@ -1,9 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "E:/CENG342/lab_10/lab_10.srcs/sim_1/imports/new/generic_register.vhd" into library work
-INFO: [VRFC 10-3107] analyzing entity 'generic_register'
-INFO: [VRFC 10-163] Analyzing VHDL file "E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'CPU'
-ERROR: [VRFC 10-1471] type error near t_line ; current type instruction_t; expected type instruction_t [E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU.vhd:51]
-ERROR: [VRFC 10-1471] type error near cwin_line ; current type control_t_array; expected type control_t_array [E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU.vhd:58]
-ERROR: [VRFC 10-2987] 'lpu' is not compiled in library 'xil_defaultlib' [E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU.vhd:72]
-ERROR: [VRFC 10-3782] unit 'arch' ignored due to previous errors [E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU.vhd:23]
-INFO: [VRFC 10-3070] VHDL file 'E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU.vhd' ignored due to errors

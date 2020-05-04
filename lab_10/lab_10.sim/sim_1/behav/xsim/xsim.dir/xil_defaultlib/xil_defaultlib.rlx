@@ -2,6 +2,8 @@
 2019.2
 Nov  6 2019
 21:57:16
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/CPU_test.vhd,1588363731,vhdl,,,,cpu_test,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/christians_cpu_tb.vhd,1588324880,vhdl,,,,lpu_tb,,,,,,,,
 E:/CENG342/lab_10/lab_10.srcs/sim_1/new/christians_sequencer_test.vhd,1588043128,vhdl,,,,christians_sequencer_test,,,,,,,,
 E:/CENG342/lab_10/lab_10.srcs/sim_1/new/instruction_decoder_test.vhd,1587969489,vhdl,,,,instruction_decoder_test,,,,,,,,
-E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer_test.vhd,1588102109,vhdl,,,,sequencer_test,,,,,,,,
+E:/CENG342/lab_10/lab_10.srcs/sim_1/new/sequencer_test.vhd,1588363947,vhdl,,,,sequencer_test,,,,,,,,

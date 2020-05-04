@@ -1,0 +1,23 @@
+# compile vhdl design source files
+vhdl work  \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/new/BTU.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/imports/new/CCR.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/new/my_package.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/new/Instruction_decoder.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/new/sequencer.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/imports/new/MCR.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/imports/new/MDR.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/imports/new/MAR.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/imports/new/PC.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/imports/new/decoder.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd" \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../Lab_12.srcs/sources_1/imports/sim_1/new/CPU_test.vhd" \
+
+# Do not sort compile order
+nosort
