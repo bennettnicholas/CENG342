@@ -1,0 +1,802 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon May  4 12:26:41 2020
+# Process ID: 22036
+# Current directory: D:/Dev/CENG342/Lab_12
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent33768 D:\Dev\CENG342\Lab_12\Lab_12.xpr
+# Log file: D:/Dev/CENG342/Lab_12/vivado.log
+# Journal file: D:/Dev/CENG342/Lab_12\vivado.jou
+#-----------------------------------------------------------
+start_guioopen_project D:/Dev/CENG342/Lab_12/Lab_12.xprIINFO: [Project 1-313] Project file moved from 'E:/CENG342/Lab_12' since last save.SScanning sources...FFinished scanning sourcesIINFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specifiedIINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 942.195 ; gain = 276.281
+uupdate_compile_order -fileset sources_1eopen_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 06 2019-23:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1069.250 ; gain = 19.395
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AA7B38A
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210292AA7B38A.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+set_property PROBES.FILE {D:/Dev/CENG342/Lab_12/Lab_12.runs/impl_1/Computer.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {D:/Dev/CENG342/Lab_12/Lab_12.runs/impl_1/Computer.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Dev/CENG342/Lab_12/Lab_12.runs/impl_1/Computer.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2020-May-04 12:48:59
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2020-May-04 12:52:04
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/Dev/CENG342/Lab_12/Lab_12.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.354 . Memory (MB): peak = 2675.715 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2931 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/RXD' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/buttons[0]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/buttons[1]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/buttons[2]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/buttons[3]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/buttons[4]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/reset' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[0]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[10]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[11]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[12]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[13]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[14]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[15]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[1]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[2]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[3]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[4]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[5]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[6]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[7]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[8]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[9]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3436.273 ; gain = 3.320
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3436.273 ; gain = 3.320
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 3436.273 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1530 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 1488 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 32 instances
+
+open_run: Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 3713.113 ; gain = 1284.965
+open_report: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3846.023 ; gain = 123.238
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292AA7B38A
+close_design
+close_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 4057.922 ; gain = 176.883
+close_hw_manager
+update_files -from_files C:/Users/Benne/Downloads/CPU_testbench.vhdl -to_files D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_test.vhd -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_test.vhd' with file 'C:/Users/Benne/Downloads/CPU_testbench.vhdl'.
+INFO: [filemgmt 20-1080] Importing file from 'C:/Users/Benne/Downloads/CPU_testbench.vhdl' to 'D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench.vhdl'.
+set_property top CPU_testbench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+update_files -from_files C:/Users/Benne/Downloads/CPU_testbench.vhdl -to_files D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench.vhdl -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench.vhdl' with file 'C:/Users/Benne/Downloads/CPU_testbench.vhdl'.
+INFO: [filemgmt 20-1080] Importing file from 'C:/Users/Benne/Downloads/CPU_testbench.vhdl' to 'D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench.vhdl'.
+update_files -from_files C:/Users/Benne/Downloads/CPU_testbench_new.vhdl -to_files D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench.vhdl -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench.vhdl' with file 'C:/Users/Benne/Downloads/CPU_testbench_new.vhdl'.
+INFO: [filemgmt 20-1080] Importing file from 'C:/Users/Benne/Downloads/CPU_testbench_new.vhdl' to 'D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl'.
+update_files -from_files C:/Users/Benne/Downloads/CPU_testbench_new.vhdl -to_files D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl' with file 'C:/Users/Benne/Downloads/CPU_testbench_new.vhdl'.
+INFO: [filemgmt 20-1080] Importing file from 'C:/Users/Benne/Downloads/CPU_testbench_new.vhdl' to 'D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl'.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj CPU_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/BTU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'BTU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'generic_register'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/CCR.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'CCR'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/my_package.vhd" into library work
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/Instruction_decoder.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'instruction_decoder'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/sequencer.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'sequencer'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MCR.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'MCR'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MDR.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'MDR'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MAR.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'MAR'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'Generic_ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/PC.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'PC'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/decoder.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'decoder'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'register_file'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'LPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CPU_testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xelab -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package work.my_package
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity work.generic_register [\generic_register(bits=16)\]
+Compiling architecture sanity_check of entity work.BTU [btu_default]
+Compiling architecture arch of entity work.instruction_decoder [instruction_decoder_default]
+Compiling architecture arch of entity work.sequencer [sequencer_default]
+Compiling architecture behavioral of entity work.generic_register [\generic_register(bits=5)\]
+Compiling architecture arch of entity work.MCR [mcr_default]
+Compiling architecture behavioral of entity work.generic_register [\generic_register(bits=32)\]
+Compiling architecture arch of entity work.MDR [mdr_default]
+Compiling architecture arch of entity work.MAR [mar_default]
+Compiling architecture behavioral of entity work.generic_register [\generic_register(bits=4)\]
+Compiling architecture arch of entity work.CCR [ccr_default]
+Compiling architecture cheating of entity work.Generic_ALU [\Generic_ALU(n_bit=32)\]
+Compiling architecture arch of entity work.PC [\PC(bits=32)\]
+Compiling architecture behavioral of entity work.decoder [decoder_default]
+Compiling architecture behavioral of entity work.register_file [register_file_default]
+Compiling architecture arch of entity work.LPU [lpu_default]
+Compiling architecture arch of entity work.CPU [cpu_default]
+Compiling architecture arch of entity xil_defaultlib.cpu_testbench
+Built simulation snapshot CPU_testbench_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/xsim.dir/CPU_testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/xsim.dir/CPU_testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon May  4 15:50:11 2020. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 79.848 ; gain = 12.723
+INFO: [Common 17-206] Exiting Webtalk at Mon May  4 15:50:11 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:30 . Memory (MB): peak = 4057.922 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '29' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_testbench_behav -key {Behavioral:sim_1:Functional:CPU_testbench} -tclbatch {CPU_testbench.tcl} -view {D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg
+WARNING: Simulation object /Computer_testbench/Computer_System/clock was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/reset was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/sseg was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/sseg_an was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/leds was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/rgb_leds was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/switches was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/buttons was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/TXD was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/RXD was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_ck_p was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_ck_n was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_cke was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_cs_n was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_ras_n was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_cas_n was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_we_n was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_dm was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_ba was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_addr was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_dq was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_dqs was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_dqs_n was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/ddr2_odt was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/address was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/data_in was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/data_out was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/cen was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/oen was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/wen was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/rts was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/rte was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/byte was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/half was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/clk_50 was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/clk_200 was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/clk_100 was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/clk_25 was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/clk_75 was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/locked was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/irst was not found in the design.
+WARNING: Simulation object /Computer_testbench/Computer_System/irstff was not found in the design.
+source CPU_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.5 ms
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.5 ms
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:40 . Memory (MB): peak = 4057.922 ; gain = 0.000
+current_wave_config {Computer_testbench_behav.wcfg}
+Computer_testbench_behav.wcfg
+add_wave {{/CPU_testbench/uut}} 
+current_wave_config {Computer_testbench_behav.wcfg}
+Computer_testbench_behav.wcfg
+add_wave {{/CPU_testbench/uut/datapath}} 
+current_wave_config {Computer_testbench_behav.wcfg}
+Computer_testbench_behav.wcfg
+add_wave {{/CPU_testbench/uut}} 
+current_wave_config {Computer_testbench_behav.wcfg}
+Computer_testbench_behav.wcfg
+add_wave {{/CPU_testbench/uut/datapath/CCR}} 
+current_wave_config {Computer_testbench_behav.wcfg}
+Computer_testbench_behav.wcfg
+add_wave {{/CPU_testbench/uut/datapath/RegisterFile}} 
+current_wave_config {Computer_testbench_behav.wcfg}
+Computer_testbench_behav.wcfg
+add_wave {{/CPU_testbench/uut/datapath/PC}} 
+save_wave_config {D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg}
+save_wave_config {D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg}
+save_wave_config {D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg}
+save_wave_config {D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 4057.922 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_testbench_vlog.prj"
+"xvhdl --incr --relax -prj CPU_testbench_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xelab -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_testbench_behav -key {Behavioral:sim_1:Functional:CPU_testbench} -tclbatch {CPU_testbench.tcl} -view {D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg
+source CPU_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.5 ms
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.5 ms
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4057.922 ; gain = 0.000
+current_wave_config {Computer_testbench_behav.wcfg}
+Computer_testbench_behav.wcfg
+add_wave {{/CPU_testbench/uut/sequecner}} 
+save_wave_config {D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg}
+save_wave_config {D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_testbench_vlog.prj"
+"xvhdl --incr --relax -prj CPU_testbench_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xelab -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_testbench_behav -key {Behavioral:sim_1:Functional:CPU_testbench} -tclbatch {CPU_testbench.tcl} -view {D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg
+source CPU_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.5 ms
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.5 ms
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 4057.922 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_testbench_vlog.prj"
+"xvhdl --incr --relax -prj CPU_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'Generic_ALU'
+ERROR: [VRFC 10-724] found '0' definitions of operator "+", cannot determine exact overloaded matching definition for "+" [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:36]
+ERROR: [VRFC 10-3782] unit 'cheating' ignored due to previous errors [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:22]
+INFO: [VRFC 10-3070] VHDL file 'D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_testbench_vlog.prj"
+"xvhdl --incr --relax -prj CPU_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'Generic_ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'LPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CPU_testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xelab -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-664] expression has 32 elements ; expected 33 [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:33]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_testbench_vlog.prj"
+"xvhdl --incr --relax -prj CPU_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'Generic_ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'LPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CPU_testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xelab -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-664] expression has 32 elements ; expected 33 [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:53]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_testbench_vlog.prj"
+"xvhdl --incr --relax -prj CPU_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'Generic_ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'LPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CPU_testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xelab -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-664] expression has 32 elements ; expected 33 [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:56]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_testbench_vlog.prj"
+"xvhdl --incr --relax -prj CPU_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'Generic_ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'LPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CPU_testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xelab -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-664] expression has 32 elements ; expected 33 [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:61]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_testbench_vlog.prj"
+"xvhdl --incr --relax -prj CPU_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'Generic_ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'LPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CPU_testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xelab -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-923] index value <32> is out of range [31:0] of array <rout> [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:46]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_testbench_vlog.prj"
+"xvhdl --incr --relax -prj CPU_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'Generic_ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'LPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU_testbench_new.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CPU_testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+"xelab -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto eec409bfc6a34e74949dbf561b8e6c4f --incr --debug typical --relax --mt 2 -L work -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_testbench_behav xil_defaultlib.CPU_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package work.my_package
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity work.generic_register [\generic_register(bits=16)\]
+Compiling architecture sanity_check of entity work.BTU [btu_default]
+Compiling architecture arch of entity work.instruction_decoder [instruction_decoder_default]
+Compiling architecture arch of entity work.sequencer [sequencer_default]
+Compiling architecture behavioral of entity work.generic_register [\generic_register(bits=5)\]
+Compiling architecture arch of entity work.MCR [mcr_default]
+Compiling architecture behavioral of entity work.generic_register [\generic_register(bits=32)\]
+Compiling architecture arch of entity work.MDR [mdr_default]
+Compiling architecture arch of entity work.MAR [mar_default]
+Compiling architecture behavioral of entity work.generic_register [\generic_register(bits=4)\]
+Compiling architecture arch of entity work.CCR [ccr_default]
+Compiling architecture cheating of entity work.Generic_ALU [generic_alu_default]
+Compiling architecture arch of entity work.PC [\PC(bits=32)\]
+Compiling architecture behavioral of entity work.decoder [decoder_default]
+Compiling architecture behavioral of entity work.register_file [register_file_default]
+Compiling architecture arch of entity work.LPU [lpu_default]
+Compiling architecture arch of entity work.CPU [cpu_default]
+Compiling architecture arch of entity xil_defaultlib.cpu_testbench
+Built simulation snapshot CPU_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Dev/CENG342/Lab_12/Lab_12.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_testbench_behav -key {Behavioral:sim_1:Functional:CPU_testbench} -tclbatch {CPU_testbench.tcl} -view {D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/Dev/CENG342/Lab_12/Computer_testbench_behav.wcfg
+source CPU_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.5 ms
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.5 ms
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 4057.922 ; gain = 0.000
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 06 2019-23:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 4228.148 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AA7B38A
+set_property PROGRAM.FILE {D:/Dev/CENG342/Lab_12/Lab_12.runs/impl_1/Computer.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {D:/Dev/CENG342/Lab_12/Lab_12.runs/impl_1/Computer.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {D:/Dev/CENG342/Lab_12/Lab_12.runs/impl_1/Computer.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Dev/CENG342/Lab_12/Lab_12.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon May  4 16:41:07 2020] Launched synth_1...
+Run output will be captured here: D:/Dev/CENG342/Lab_12/Lab_12.runs/synth_1/runme.log
+[Mon May  4 16:41:07 2020] Launched impl_1...
+Run output will be captured here: D:/Dev/CENG342/Lab_12/Lab_12.runs/impl_1/runme.log
+set_property top Computer_testbench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\imports\new\generic_register.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\imports\new\CCR.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\imports\new\LPU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\new\CPU_testbench_new.vhdl:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\imports\new\Generic_ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\new\BTU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\new\sequencer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\new\CPU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\new\Instruction_decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\imports\new\generic_register.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\imports\new\CCR.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\imports\new\LPU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\new\CPU_testbench_new.vhdl:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\imports\new\Generic_ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\new\BTU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\new\sequencer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\new\CPU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Dev\CENG342\Lab_12\Lab_12.srcs\sources_1\imports\sim_1\new\Instruction_decoder.vhd:]

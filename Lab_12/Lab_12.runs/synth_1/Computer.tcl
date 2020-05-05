@@ -19,49 +19,46 @@ proc create_report { reportName command } {
 }
 set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 4
-set_param synth.incrementalSynthesisCache C:/Users/Default.DESKTOP-EAA4J5I/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7236-DESKTOP-EAA4J5I/incrSyn
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir E:/CENG342/Lab_12/Lab_12.cache/wt [current_project]
-set_property parent.project_path E:/CENG342/Lab_12/Lab_12.xpr [current_project]
+set_property webtalk.parent_dir D:/Dev/CENG342/Lab_12/Lab_12.cache/wt [current_project]
+set_property parent.project_path D:/Dev/CENG342/Lab_12/Lab_12.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.0 [current_project]
-set_property ip_output_repo e:/CENG342/Lab_12/Lab_12.cache/ip [current_project]
+set_property ip_output_repo d:/Dev/CENG342/Lab_12/Lab_12.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library work {
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/BTU.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/CCR.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/my_package.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/Instruction_decoder.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/sequencer.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MCR.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MDR.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MAR.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/PC.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/decoder.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd
-  E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Computer.vhdl
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/BTU.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/CCR.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/my_package.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/Instruction_decoder.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/sequencer.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MCR.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MDR.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MAR.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/PC.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/decoder.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd
+  D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Computer.vhdl
 }
-read_ip -quiet e:/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all e:/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all e:/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all e:/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all d:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_edif E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Memory_NO_DDR.edf
+read_edif D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Memory_NO_DDR.edf
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -70,14 +67,14 @@ read_edif E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Memor
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc
-set_property used_in_implementation false [get_files E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc]
+read_xdc D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc
+set_property used_in_implementation false [get_files D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc]
 
-read_xdc E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc
-set_property used_in_implementation false [get_files E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc]
+read_xdc D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc]
 
-read_xdc E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc
-set_property used_in_implementation false [get_files E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc]
+read_xdc D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc
+set_property used_in_implementation false [get_files D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

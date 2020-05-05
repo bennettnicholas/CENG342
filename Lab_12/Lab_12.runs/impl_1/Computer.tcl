@@ -61,8 +61,6 @@ proc step_failed { step } {
 }
 
 set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -70,23 +68,22 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 4
-  set_param synth.incrementalSynthesisCache C:/Users/Default.DESKTOP-EAA4J5I/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7236-DESKTOP-EAA4J5I/incrSyn
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys-a7-100t:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir E:/CENG342/Lab_12/Lab_12.cache/wt [current_project]
-  set_property parent.project_path E:/CENG342/Lab_12/Lab_12.xpr [current_project]
-  set_property ip_output_repo E:/CENG342/Lab_12/Lab_12.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Dev/CENG342/Lab_12/Lab_12.cache/wt [current_project]
+  set_property parent.project_path D:/Dev/CENG342/Lab_12/Lab_12.xpr [current_project]
+  set_property ip_output_repo D:/Dev/CENG342/Lab_12/Lab_12.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet E:/CENG342/Lab_12/Lab_12.runs/synth_1/Computer.dcp
-  read_ip -quiet e:/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_edif E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Memory_NO_DDR.edf
-  read_xdc E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc
-  read_xdc E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc
-  read_xdc E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc
+  add_files -quiet D:/Dev/CENG342/Lab_12/Lab_12.runs/synth_1/Computer.dcp
+  read_ip -quiet D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_edif D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Memory_NO_DDR.edf
+  read_xdc D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc
+  read_xdc D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc
+  read_xdc D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc
   link_design -top Computer -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

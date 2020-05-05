@@ -147,7 +147,7 @@ begin
             "1111"; -- just in case they add something 
    --Irle
    control(Irle) <= IrleI;
-   IrleI <= '1'; -- ask pyeatt what to do with this 
+   IrleI <= '1'; -- ask pyeatt what to do with this *****************************************************************************************************************************************************************************************
             
     -- DIsel
     control(DIsel) <= DIselI;

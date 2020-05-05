@@ -1,0 +1,1 @@
+-wto "eec409bfc6a34e74949dbf561b8e6c4f" --incr --debug "typical" --relax --mt "2" -L "work" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "ALU_Testbench_behav" "work.ALU_Testbench" "work.glbl" -log "elaborate.log" 

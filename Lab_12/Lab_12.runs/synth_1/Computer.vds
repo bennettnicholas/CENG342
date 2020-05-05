@@ -2,12 +2,12 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun May  3 23:29:52 2020
-# Process ID: 20584
-# Current directory: E:/CENG342/Lab_12/Lab_12.runs/synth_1
+# Start of session at: Mon May  4 20:23:53 2020
+# Process ID: 15612
+# Current directory: D:/Dev/CENG342/Lab_12/Lab_12.runs/synth_1
 # Command line: vivado.exe -log Computer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Computer.tcl
-# Log file: E:/CENG342/Lab_12/Lab_12.runs/synth_1/Computer.vds
-# Journal file: E:/CENG342/Lab_12/Lab_12.runs/synth_1\vivado.jou
+# Log file: D:/Dev/CENG342/Lab_12/Lab_12.runs/synth_1/Computer.vds
+# Journal file: D:/Dev/CENG342/Lab_12/Lab_12.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Computer.tcl -notrace
 Command: synth_design -top Computer -part xc7a100tcsg324-1 -fanout_limit 400 -directive PerformanceOptimized -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
@@ -16,81 +16,84 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12492 
+INFO: Helper process launched with PID 4692 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 843.891 ; gain = 234.273
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1001.484 ; gain = 235.375
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Computer' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Computer.vhdl:41]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'E:/CENG342/Lab_12/Lab_12.runs/synth_1/.Xil/Vivado-20584-DESKTOP-EAA4J5I/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'clkgen' of component 'clk_wiz_0' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Computer.vhdl:133]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [E:/CENG342/Lab_12/Lab_12.runs/synth_1/.Xil/Vivado-20584-DESKTOP-EAA4J5I/realtime/clk_wiz_0_stub.vhdl:19]
-INFO: [Synth 8-638] synthesizing module 'CPU' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd:24]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd:30]
-INFO: [Synth 8-638] synthesizing module 'generic_register' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'Computer' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Computer.vhdl:41]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Dev/CENG342/Lab_12/Lab_12.runs/synth_1/.Xil/Vivado-15612-DESKTOP-R7M70QL/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'clkgen' of component 'clk_wiz_0' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Computer.vhdl:133]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Dev/CENG342/Lab_12/Lab_12.runs/synth_1/.Xil/Vivado-15612-DESKTOP-R7M70QL/realtime/clk_wiz_0_stub.vhdl:19]
+INFO: [Synth 8-638] synthesizing module 'CPU' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd:24]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'generic_register' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
 	Parameter Bits bound to: 16 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_register' (1#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
-INFO: [Synth 8-638] synthesizing module 'instruction_decoder' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/Instruction_decoder.vhd:20]
-INFO: [Synth 8-638] synthesizing module 'BTU' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/BTU.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'BTU' (2#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/BTU.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'instruction_decoder' (3#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/Instruction_decoder.vhd:20]
-INFO: [Synth 8-638] synthesizing module 'sequencer' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/sequencer.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'sequencer' (4#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/sequencer.vhd:16]
-INFO: [Synth 8-638] synthesizing module 'LPU' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'generic_register' (1#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'instruction_decoder' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/Instruction_decoder.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'BTU' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/BTU.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'BTU' (2#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/BTU.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'instruction_decoder' (3#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/Instruction_decoder.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'sequencer' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/sequencer.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'sequencer' (4#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/sequencer.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'LPU' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:32]
 	Parameter Bits bound to: 32 - type: integer 
 	Parameter Nsel bound to: 3 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:37]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:42]
-INFO: [Synth 8-638] synthesizing module 'MCR' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MCR.vhd:13]
-INFO: [Synth 8-638] synthesizing module 'generic_register__parameterized0' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:37]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'MCR' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MCR.vhd:13]
+INFO: [Synth 8-638] synthesizing module 'generic_register__parameterized0' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
 	Parameter Bits bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_register__parameterized0' (4#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'MCR' (5#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MCR.vhd:13]
-INFO: [Synth 8-638] synthesizing module 'MDR' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MDR.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'generic_register__parameterized0' (4#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'MCR' (5#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MCR.vhd:13]
+INFO: [Synth 8-638] synthesizing module 'MDR' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MDR.vhd:14]
 	Parameter Bits bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'generic_register__parameterized1' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'generic_register__parameterized1' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
 	Parameter Bits bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_register__parameterized1' (5#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'MDR' (6#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MDR.vhd:14]
-INFO: [Synth 8-638] synthesizing module 'MAR' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MAR.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'generic_register__parameterized1' (5#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'MDR' (6#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MDR.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'MAR' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MAR.vhd:14]
 	Parameter Bits bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'MAR' (7#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MAR.vhd:14]
-INFO: [Synth 8-638] synthesizing module 'CCR' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/CCR.vhd:14]
-INFO: [Synth 8-638] synthesizing module 'generic_register__parameterized2' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'MAR' (7#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/MAR.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'CCR' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/CCR.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'generic_register__parameterized2' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
 	Parameter Bits bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_register__parameterized2' (7#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'CCR' (8#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/CCR.vhd:14]
-INFO: [Synth 8-638] synthesizing module 'Generic_ALU' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'generic_register__parameterized2' (7#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/generic_register.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'CCR' (8#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/CCR.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'Generic_ALU' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:62]
 	Parameter N_Bit bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Generic_ALU' (9#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:22]
-INFO: [Synth 8-638] synthesizing module 'PC' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/PC.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'Generic_Add_With_Overflow' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:19]
+	Parameter N_Bit bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Generic_Add_With_Overflow' (9#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'Generic_ALU' (10#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/Generic_ALU.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'PC' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/PC.vhd:14]
 	Parameter Bits bound to: 32 - type: integer 
 	Parameter Increment bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'PC' (10#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/PC.vhd:14]
-INFO: [Synth 8-638] synthesizing module 'register_file' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'PC' (11#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/PC.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'register_file' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:27]
 	Parameter Bits bound to: 32 - type: integer 
 	Parameter Nsel bound to: 3 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:31]
-INFO: [Synth 8-638] synthesizing module 'decoder' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/decoder.vhd:15]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'decoder' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/decoder.vhd:15]
 	Parameter Bits bound to: 3 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'decoder' (11#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/decoder.vhd:15]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[7].Register_num'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[6].Register_num'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[5].Register_num'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[4].Register_num'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[3].Register_num'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[2].Register_num'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[1].Register_num'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[0].Register_num'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'register_file' (12#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:27]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PC'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:81]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MAR'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:56]
-INFO: [Synth 8-256] done synthesizing module 'LPU' (13#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:32]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Instruction_register'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd:44]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Instruction_decoder'. This will prevent further optimization [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd:55]
-INFO: [Synth 8-256] done synthesizing module 'CPU' (14#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd:24]
-INFO: [Synth 8-637] synthesizing blackbox instance 'Memory_system' of component 'Memory_NO_DDR' [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Computer.vhdl:175]
-INFO: [Synth 8-256] done synthesizing module 'Computer' (15#1) [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Computer.vhdl:41]
+INFO: [Synth 8-256] done synthesizing module 'decoder' (12#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/decoder.vhd:15]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[7].Register_num'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[6].Register_num'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[5].Register_num'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[4].Register_num'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[3].Register_num'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[2].Register_num'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[1].Register_num'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Registers[0].Register_num'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'register_file' (13#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/register_file.vhd:27]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PC'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:81]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MAR'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'LPU' (14#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/imports/new/LPU.vhd:32]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Instruction_register'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd:44]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Instruction_decoder'. This will prevent further optimization [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'CPU' (15#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/sim_1/new/CPU.vhd:24]
+INFO: [Synth 8-637] synthesizing blackbox instance 'Memory_system' of component 'Memory_NO_DDR' [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Computer.vhdl:175]
+INFO: [Synth 8-256] done synthesizing module 'Computer' (16#1) [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Computer.vhdl:41]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 918.531 ; gain = 308.914
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1076.418 ; gain = 310.309
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -103,78 +106,78 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 918.531 ; gain = 308.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1076.418 ; gain = 310.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 918.531 ; gain = 308.914
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1076.418 ; gain = 310.309
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 918.531 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1076.418 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [e:/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clkgen'
-Finished Parsing XDC File [e:/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clkgen'
-Parsing XDC File [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc]
-WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[0]'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:254]
-WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[0]'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:255]
-WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[0]'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:256]
-WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[0]'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:257]
-WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[1]'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:266]
-WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[1]'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:267]
-WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[1]'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:268]
-WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[1]'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:269]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {NAME =~ */mc0/mc_read_idle_r_reg}'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:331]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {NAME =~ */input_[?].iserdes_dq_.iserdesdq}'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:331]
-WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:333]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME == PHASER_IN_PHY}'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:335]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {NAME =~ */DQSFOUND} -of [get_cells -hier -filter {REF_NAME == PHASER_IN_PHY}]'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:335]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME == PHASER_OUT_PHY}'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:337]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {NAME =~ */OSERDESRST} -of [get_cells -hier -filter {REF_NAME == PHASER_OUT_PHY}]'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:337]
-WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:338]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:341]
-WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -hier -filter {NAME =~ */u_iodelay_ctrl/sys_rst_i}'. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:344]
-Finished Parsing XDC File [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Computer_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Computer_propImpl.xdc].
+Parsing XDC File [d:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clkgen'
+Finished Parsing XDC File [d:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clkgen'
+Parsing XDC File [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc]
+WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[0]'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:254]
+WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[0]'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:255]
+WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[0]'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:256]
+WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[0]'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:257]
+WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[1]'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:266]
+WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[1]'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:267]
+WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[1]'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:268]
+WARNING: [Vivado 12-584] No ports matched 'ddr2_dqs_p[1]'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:269]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {NAME =~ */mc0/mc_read_idle_r_reg}'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:331]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {NAME =~ */input_[?].iserdes_dq_.iserdesdq}'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:331]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:333]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME == PHASER_IN_PHY}'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:335]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {NAME =~ */DQSFOUND} -of [get_cells -hier -filter {REF_NAME == PHASER_IN_PHY}]'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:335]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME == PHASER_OUT_PHY}'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:337]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {NAME =~ */OSERDESRST} -of [get_cells -hier -filter {REF_NAME == PHASER_OUT_PHY}]'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:337]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:338]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:341]
+WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -hier -filter {NAME =~ */u_iodelay_ctrl/sys_rst_i}'. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc:344]
+Finished Parsing XDC File [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Computer_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Computer_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Computer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc]
-INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_50_clk_wiz_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc:216]
-Finished Parsing XDC File [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Computer_propImpl.xdc].
+Parsing XDC File [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_50_clk_wiz_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc:216]
+Finished Parsing XDC File [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Computer_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Computer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc]
-Finished Parsing XDC File [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Computer_propImpl.xdc].
+Parsing XDC File [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc]
+Finished Parsing XDC File [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/bitstream_settings.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Computer_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Computer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1033.492 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1191.691 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1033.492 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1191.691 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1033.492 ; gain = 423.875
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1191.691 ; gain = 425.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1033.492 ; gain = 423.875
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1191.691 ; gain = 425.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_n. (constraint file  E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc, line 27).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_p. (constraint file  E:/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_n. (constraint file  D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_p. (constraint file  D:/Dev/CENG342/Lab_12/Lab_12.srcs/constrs_1/imports/Computer_package/DDR2.xdc, line 28).
 Applied set_property DONT_TOUCH = true for clkgen. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1033.492 ; gain = 423.875
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1191.691 ; gain = 425.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1033.492 ; gain = 423.875
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1191.691 ; gain = 425.582
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -187,11 +190,11 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     33 Bit       Adders := 3     
-	   3 Input     33 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
 	   2 Input     32 Bit       Adders := 1     
+	   3 Input      2 Bit       Adders := 1     
 +---XORs : 
-	   2 Input     33 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
 	               32 Bit    Registers := 11    
@@ -201,7 +204,7 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 7     
+	   2 Input     32 Bit        Muxes := 9     
 	   3 Input     32 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 4     
 	   4 Input     17 Bit        Muxes := 1     
@@ -214,12 +217,13 @@ Detailed RTL Component Info :
 	   8 Input      3 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
 	  12 Input      1 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 17    
+	   2 Input      1 Bit        Muxes := 20    
 	   7 Input      1 Bit        Muxes := 3     
 	   8 Input      1 Bit        Muxes := 4     
 	  11 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -278,14 +282,21 @@ Module generic_register__parameterized2
 Detailed RTL Component Info : 
 +---Registers : 
 	                4 Bit    Registers := 1     
-Module Generic_ALU 
+Module Generic_Add_With_Overflow 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     33 Bit       Adders := 3     
-	   3 Input     33 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   3 Input      2 Bit       Adders := 1     
 +---XORs : 
-	   2 Input     33 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 1     
+Module Generic_ALU 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
 Module PC 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -320,7 +331,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1033.492 ; gain = 423.875
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1191.691 ; gain = 425.582
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -332,13 +343,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1033.492 ; gain = 423.875
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1191.691 ; gain = 425.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1140.156 ; gain = 530.539
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1282.555 ; gain = 516.445
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -350,7 +361,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 1140.156 ; gain = 530.539
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1282.555 ; gain = 516.445
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -374,13 +385,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1140.977 ; gain = 531.359
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1283.379 ; gain = 517.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1140.977 ; gain = 531.359
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1283.379 ; gain = 517.270
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -399,25 +410,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1140.977 ; gain = 531.359
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1283.379 ; gain = 517.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1140.977 ; gain = 531.359
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1283.379 ; gain = 517.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1140.977 ; gain = 531.359
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1283.379 ; gain = 517.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1140.977 ; gain = 531.359
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1283.379 ; gain = 517.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -437,13 +448,13 @@ Report Cell Usage:
 +------+---------------------+------+
 |1     |Memory_NO_DDR_bbox_1 |     1|
 |2     |clk_wiz_0_bbox_0     |     1|
-|3     |CARRY4               |    44|
-|4     |LUT1                 |    41|
-|5     |LUT2                 |   102|
-|6     |LUT3                 |   158|
-|7     |LUT4                 |    71|
-|8     |LUT5                 |   160|
-|9     |LUT6                 |   466|
+|3     |CARRY4               |    16|
+|4     |LUT1                 |    25|
+|5     |LUT2                 |    32|
+|6     |LUT3                 |   140|
+|7     |LUT4                 |    66|
+|8     |LUT5                 |   201|
+|9     |LUT6                 |   432|
 |10    |MUXF7                |    32|
 |11    |FDCE                 |     2|
 |12    |FDRE                 |   380|
@@ -455,43 +466,44 @@ Report Instance Areas:
 +------+------------------------------------+-------------------------------------+------+
 |      |Instance                            |Module                               |Cells |
 +------+------------------------------------+-------------------------------------+------+
-|1     |top                                 |                                     |  1648|
-|2     |  CPU                               |CPU                                  |  1453|
+|1     |top                                 |                                     |  1518|
+|2     |  CPU                               |CPU                                  |  1323|
 |3     |    Instruction_register            |generic_register                     |    18|
 |4     |    Instruction_decoder             |instruction_decoder                  |   148|
-|5     |    datapath                        |LPU                                  |  1260|
+|5     |    datapath                        |LPU                                  |  1130|
 |6     |      MAR                           |MAR                                  |    34|
 |7     |        MAR_register                |generic_register__parameterized1_0   |    34|
 |8     |      PC                            |PC                                   |    74|
-|9     |      ALU                           |Generic_ALU                          |    96|
-|10    |      CCR                           |CCR                                  |    17|
-|11    |        CCR_register                |generic_register__parameterized2     |    17|
-|12    |      MCR                           |MCR                                  |     6|
-|13    |        MCR_register                |generic_register__parameterized0     |     6|
-|14    |      MDR                           |MDR                                  |    34|
-|15    |        MDR_register                |generic_register__parameterized1__10 |    34|
-|16    |      RegisterFile                  |register_file                        |   999|
-|17    |        \Registers[0].Register_num  |generic_register__parameterized1__3  |    34|
-|18    |        \Registers[1].Register_num  |generic_register__parameterized1__4  |    34|
-|19    |        \Registers[2].Register_num  |generic_register__parameterized1__5  |    34|
-|20    |        \Registers[3].Register_num  |generic_register__parameterized1__6  |    34|
-|21    |        \Registers[4].Register_num  |generic_register__parameterized1__7  |    34|
-|22    |        \Registers[5].Register_num  |generic_register__parameterized1__8  |    34|
-|23    |        \Registers[6].Register_num  |generic_register__parameterized1__9  |    34|
-|24    |        \Registers[7].Register_num  |generic_register__parameterized1     |    34|
-|25    |    sequecner                       |sequencer                            |    27|
+|9     |      ALU                           |Generic_ALU                          |    31|
+|10    |        GAWO                        |Generic_Add_With_Overflow            |    31|
+|11    |      CCR                           |CCR                                  |    18|
+|12    |        CCR_register                |generic_register__parameterized2     |    18|
+|13    |      MCR                           |MCR                                  |     6|
+|14    |        MCR_register                |generic_register__parameterized0     |     6|
+|15    |      MDR                           |MDR                                  |    34|
+|16    |        MDR_register                |generic_register__parameterized1__10 |    34|
+|17    |      RegisterFile                  |register_file                        |   933|
+|18    |        \Registers[0].Register_num  |generic_register__parameterized1__3  |    34|
+|19    |        \Registers[1].Register_num  |generic_register__parameterized1__4  |    34|
+|20    |        \Registers[2].Register_num  |generic_register__parameterized1__5  |    34|
+|21    |        \Registers[3].Register_num  |generic_register__parameterized1__6  |    34|
+|22    |        \Registers[4].Register_num  |generic_register__parameterized1__7  |    34|
+|23    |        \Registers[5].Register_num  |generic_register__parameterized1__8  |    34|
+|24    |        \Registers[6].Register_num  |generic_register__parameterized1__9  |    34|
+|25    |        \Registers[7].Register_num  |generic_register__parameterized1     |    34|
+|26    |    sequecner                       |sequencer                            |    27|
 +------+------------------------------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1140.977 ; gain = 531.359
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1283.379 ; gain = 517.270
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:02 ; elapsed = 00:01:11 . Memory (MB): peak = 1140.977 ; gain = 416.398
-Synthesis Optimization Complete : Time (s): cpu = 00:01:14 ; elapsed = 00:01:15 . Memory (MB): peak = 1140.977 ; gain = 531.359
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1283.379 ; gain = 401.996
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1283.379 ; gain = 517.270
 INFO: [Project 1-571] Translating synthesized netlist
-Parsing EDIF File [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Memory_NO_DDR.edf]
-Finished Parsing EDIF File [E:/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Memory_NO_DDR.edf]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1159.625 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 666 Unisim elements for replacement
+Parsing EDIF File [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Memory_NO_DDR.edf]
+Finished Parsing EDIF File [D:/Dev/CENG342/Lab_12/Lab_12.srcs/sources_1/imports/Computer_package/Memory_NO_DDR.edf]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1305.000 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 638 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -855,20 +867,20 @@ WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because n
 WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[8]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
 WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Memory_system/switches[9]' is not directly connected to top level port. Synthesis is ignored for IOSTANDARD but preserved for implementation.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1159.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1305.000 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-71 Infos, 210 Warnings, 0 Critical Warnings and 0 Errors encountered.
+73 Infos, 210 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 1159.625 ; gain = 841.664
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1305.000 ; gain = 822.813
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1159.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1305.000 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'E:/CENG342/Lab_12/Lab_12.runs/synth_1/Computer.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Dev/CENG342/Lab_12/Lab_12.runs/synth_1/Computer.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Computer_utilization_synth.rpt -pb Computer_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May  3 23:31:23 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 20:24:43 2020...

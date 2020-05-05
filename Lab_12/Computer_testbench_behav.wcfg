@@ -3,190 +3,129 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="Computer_testbench_behav.wdb" id="1">
+      <db_ref path="ALU_Testbench_behav.wdb" id="1">
          <top_modules>
-            <top_module name="Computer_testbench" />
+            <top_module name="ALU_Testbench" />
             <top_module name="glbl" />
-            <top_module name="my_package" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="137705100fs"></ZoomStartTime>
-      <ZoomEndTime time="1637705101fs"></ZoomEndTime>
-      <Cursor1Time time="1387705100fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1956482fs"></ZoomEndTime>
+      <Cursor1Time time="2114000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="146"></NameColumnWidth>
-      <ValueColumnWidth column_width="147"></ValueColumnWidth>
+      <NameColumnWidth column_width="143"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="42" />
-   <wvobject fp_name="/Computer_testbench/Computer_System/clock" type="logic">
-      <obj_property name="ElementShortName">clock</obj_property>
-      <obj_property name="ObjectShortName">clock</obj_property>
+   <WVObjectSize size="27" />
+   <wvobject fp_name="/ALU_Testbench/A" type="array">
+      <obj_property name="ElementShortName">A[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/reset" type="logic">
-      <obj_property name="ElementShortName">reset</obj_property>
-      <obj_property name="ObjectShortName">reset</obj_property>
+   <wvobject fp_name="/ALU_Testbench/B" type="array">
+      <obj_property name="ElementShortName">B[7:0]</obj_property>
+      <obj_property name="ObjectShortName">B[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/sseg" type="array">
-      <obj_property name="ElementShortName">sseg[7:0]</obj_property>
-      <obj_property name="ObjectShortName">sseg[7:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/Ci" type="array">
+      <obj_property name="ElementShortName">Ci[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Ci[0:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/sseg_an" type="array">
-      <obj_property name="ElementShortName">sseg_an[7:0]</obj_property>
-      <obj_property name="ObjectShortName">sseg_an[7:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/F" type="array">
+      <obj_property name="ElementShortName">F[3:0]</obj_property>
+      <obj_property name="ObjectShortName">F[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/leds" type="array">
-      <obj_property name="ElementShortName">leds[15:0]</obj_property>
-      <obj_property name="ObjectShortName">leds[15:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/R" type="array">
+      <obj_property name="ElementShortName">R[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/rgb_leds" type="array">
-      <obj_property name="ElementShortName">rgb_leds[5:0]</obj_property>
-      <obj_property name="ObjectShortName">rgb_leds[5:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/Co" type="logic">
+      <obj_property name="ElementShortName">Co</obj_property>
+      <obj_property name="ObjectShortName">Co</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/switches" type="array">
-      <obj_property name="ElementShortName">switches[15:0]</obj_property>
-      <obj_property name="ObjectShortName">switches[15:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/Z" type="logic">
+      <obj_property name="ElementShortName">Z</obj_property>
+      <obj_property name="ObjectShortName">Z</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/buttons" type="array">
-      <obj_property name="ElementShortName">buttons[4:0]</obj_property>
-      <obj_property name="ObjectShortName">buttons[4:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/N" type="logic">
+      <obj_property name="ElementShortName">N</obj_property>
+      <obj_property name="ObjectShortName">N</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/TXD" type="logic">
-      <obj_property name="ElementShortName">TXD</obj_property>
-      <obj_property name="ObjectShortName">TXD</obj_property>
+   <wvobject fp_name="/ALU_Testbench/V" type="logic">
+      <obj_property name="ElementShortName">V</obj_property>
+      <obj_property name="ObjectShortName">V</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/RXD" type="logic">
-      <obj_property name="ElementShortName">RXD</obj_property>
-      <obj_property name="ObjectShortName">RXD</obj_property>
+   <wvobject fp_name="/ALU_Testbench/N_Bit" type="other">
+      <obj_property name="ElementShortName">N_Bit</obj_property>
+      <obj_property name="ObjectShortName">N_Bit</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_ck_p" type="logic">
-      <obj_property name="ElementShortName">ddr2_ck_p</obj_property>
-      <obj_property name="ObjectShortName">ddr2_ck_p</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/A" type="array">
+      <obj_property name="ElementShortName">A[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_ck_n" type="logic">
-      <obj_property name="ElementShortName">ddr2_ck_n</obj_property>
-      <obj_property name="ObjectShortName">ddr2_ck_n</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/B" type="array">
+      <obj_property name="ElementShortName">B[7:0]</obj_property>
+      <obj_property name="ObjectShortName">B[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_cke" type="logic">
-      <obj_property name="ElementShortName">ddr2_cke</obj_property>
-      <obj_property name="ObjectShortName">ddr2_cke</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/F" type="array">
+      <obj_property name="ElementShortName">F[3:0]</obj_property>
+      <obj_property name="ObjectShortName">F[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_cs_n" type="logic">
-      <obj_property name="ElementShortName">ddr2_cs_n</obj_property>
-      <obj_property name="ObjectShortName">ddr2_cs_n</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/Ci" type="array">
+      <obj_property name="ElementShortName">Ci[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Ci[0:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_ras_n" type="logic">
-      <obj_property name="ElementShortName">ddr2_ras_n</obj_property>
-      <obj_property name="ObjectShortName">ddr2_ras_n</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/Co" type="logic">
+      <obj_property name="ElementShortName">Co</obj_property>
+      <obj_property name="ObjectShortName">Co</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_cas_n" type="logic">
-      <obj_property name="ElementShortName">ddr2_cas_n</obj_property>
-      <obj_property name="ObjectShortName">ddr2_cas_n</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/Z" type="logic">
+      <obj_property name="ElementShortName">Z</obj_property>
+      <obj_property name="ObjectShortName">Z</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_we_n" type="logic">
-      <obj_property name="ElementShortName">ddr2_we_n</obj_property>
-      <obj_property name="ObjectShortName">ddr2_we_n</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/N" type="logic">
+      <obj_property name="ElementShortName">N</obj_property>
+      <obj_property name="ObjectShortName">N</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_dm" type="array">
-      <obj_property name="ElementShortName">ddr2_dm[1:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr2_dm[1:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/V" type="logic">
+      <obj_property name="ElementShortName">V</obj_property>
+      <obj_property name="ObjectShortName">V</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_ba" type="array">
-      <obj_property name="ElementShortName">ddr2_ba[2:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr2_ba[2:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/R" type="array">
+      <obj_property name="ElementShortName">R[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_addr" type="array">
-      <obj_property name="ElementShortName">ddr2_addr[12:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr2_addr[12:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/Rout" type="array">
+      <obj_property name="ElementShortName">Rout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Rout[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_dq" type="array">
-      <obj_property name="ElementShortName">ddr2_dq[15:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr2_dq[15:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/Ax" type="array">
+      <obj_property name="ElementShortName">Ax[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Ax[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_dqs" type="array">
-      <obj_property name="ElementShortName">ddr2_dqs[1:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr2_dqs[1:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/Bx" type="array">
+      <obj_property name="ElementShortName">Bx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Bx[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_dqs_n" type="array">
-      <obj_property name="ElementShortName">ddr2_dqs_n[1:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr2_dqs_n[1:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/sum" type="array">
+      <obj_property name="ElementShortName">sum[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/ddr2_odt" type="logic">
-      <obj_property name="ElementShortName">ddr2_odt</obj_property>
-      <obj_property name="ObjectShortName">ddr2_odt</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/sum2" type="array">
+      <obj_property name="ElementShortName">sum2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sum2[1:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/address" type="array">
-      <obj_property name="ElementShortName">address[31:0]</obj_property>
-      <obj_property name="ObjectShortName">address[31:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/sum3" type="array">
+      <obj_property name="ElementShortName">sum3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sum3[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/data_in" type="array">
-      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/lsval" type="array">
+      <obj_property name="ElementShortName">lsval[8:0]</obj_property>
+      <obj_property name="ObjectShortName">lsval[8:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/data_out" type="array">
-      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/cen" type="logic">
-      <obj_property name="ElementShortName">cen</obj_property>
-      <obj_property name="ObjectShortName">cen</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/oen" type="logic">
-      <obj_property name="ElementShortName">oen</obj_property>
-      <obj_property name="ObjectShortName">oen</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/wen" type="logic">
-      <obj_property name="ElementShortName">wen</obj_property>
-      <obj_property name="ObjectShortName">wen</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/rts" type="logic">
-      <obj_property name="ElementShortName">rts</obj_property>
-      <obj_property name="ObjectShortName">rts</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/rte" type="logic">
-      <obj_property name="ElementShortName">rte</obj_property>
-      <obj_property name="ObjectShortName">rte</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/byte" type="logic">
-      <obj_property name="ElementShortName">byte</obj_property>
-      <obj_property name="ObjectShortName">byte</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/half" type="logic">
-      <obj_property name="ElementShortName">half</obj_property>
-      <obj_property name="ObjectShortName">half</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/clk_50" type="logic">
-      <obj_property name="ElementShortName">clk_50</obj_property>
-      <obj_property name="ObjectShortName">clk_50</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/clk_200" type="logic">
-      <obj_property name="ElementShortName">clk_200</obj_property>
-      <obj_property name="ObjectShortName">clk_200</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/clk_100" type="logic">
-      <obj_property name="ElementShortName">clk_100</obj_property>
-      <obj_property name="ObjectShortName">clk_100</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/clk_25" type="logic">
-      <obj_property name="ElementShortName">clk_25</obj_property>
-      <obj_property name="ObjectShortName">clk_25</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/clk_75" type="logic">
-      <obj_property name="ElementShortName">clk_75</obj_property>
-      <obj_property name="ObjectShortName">clk_75</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/locked" type="logic">
-      <obj_property name="ElementShortName">locked</obj_property>
-      <obj_property name="ObjectShortName">locked</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/irst" type="logic">
-      <obj_property name="ElementShortName">irst</obj_property>
-      <obj_property name="ObjectShortName">irst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Computer_testbench/Computer_System/irstff" type="logic">
-      <obj_property name="ElementShortName">irstff</obj_property>
-      <obj_property name="ObjectShortName">irstff</obj_property>
+   <wvobject fp_name="/ALU_Testbench/uut/N_Bit" type="other">
+      <obj_property name="ElementShortName">N_Bit</obj_property>
+      <obj_property name="ObjectShortName">N_Bit</obj_property>
    </wvobject>
 </wave_config>
